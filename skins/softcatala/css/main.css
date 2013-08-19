@@ -1,0 +1,768 @@
+/* Table of contents*/
+
+#toc, .toc {
+border:1px solid #AAAAAA;background-color:#F9F9F9;padding:1px 1px 1px 1px;margin-bottom:15px;font-family:Arial, Helvetica, sans-serif;font-size:10px;width:200px; margin-top:5px;margin-left:5px;clear:left;
+}
+
+#toc h2,
+.toc h2 {
+	display: none;
+}
+
+#toc #toctitle,
+.toc #toctitle,
+#toc .toctitle,
+.toc .toctitle {
+	text-align: center;
+}
+
+#toc li,
+.toc li
+{
+	font-family:Arial,Helvetica,sans-serif;font-size:11px;line-height:19px;color:#003399;padding:0px 5px 0px 0px;display:block;width:175px;
+}
+
+#toc li .tocnumber,
+.toc li .tocnumber {
+font-size: 11.5px;
+padding-right:3px;
+}
+
+#toc a,
+.toc a {color:#003399;text-decoration:none;}
+
+#toc a:hover,
+.toc a:hover {color:#003399;text-decoration:underline;}
+
+#toc ul,
+.toc ul {
+	width:160px;padding:0px 0px 0px 0px;line-height:20px;margin-left:0px;
+	list-style-type: none;
+	list-style-image: none;
+	text-align: left;
+}
+#toc ul ul,
+.toc ul ul {
+	margin-left: 2px;
+	margin-right: 6px;
+}
+#toc .toctoggle,
+.toc .toctoggle {
+	font-size: 84%;
+}
+
+/**TOC Preferències **/
+
+#preftoc {
+clear:both;
+margin:0;
+padding:0;
+width:100%;
+}
+
+#preftoc > li.selected {
+top:2px;
+}
+#preftoc li.selected {
+background-color:#F9F9F9;
+border-color:#AAAAAA;
+border-style:solid solid none;
+border-width:1px 1px medium;
+cursor:default;
+font-weight:bold;
+margin-right:-3px;
+padding-top:2px;
+top:1px;
+}
+
+#preftoc li {
+border-color:#FFFFFF;
+border-style:solid solid none;
+border-width:1px 1px 0;
+float:left;
+list-style-image:none;
+list-style-type:none;
+margin:1px -2px 1px 2px;
+padding:2px 0 3px;
+position:relative;
+white-space:nowrap;
+z-index:3;
+}
+
+#preftoc li {
+background-color:#F0F0F0;
+color:#000000;
+}
+
+/** Table diff **/
+
+table.diff {
+clear:both;
+}
+
+/** ContentSub **/
+
+#contentSub {font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px;font-weight:bold;color:#D1CFC1;position:relative;margin-left:15px;margin-top:13px;margin-right:auto;margin-bottom:3px;}
+#contentSub a{color:#D1CFC1;text-decoration:none;}
+#contentSub a:hover{color:#D1CFC1;text-decoration:underline;}
+
+
+
+/* Body white */
+
+.boxwhite3{font-family:Verdana, Arial, Helvetica, sans-serif;color:#191919;font-size:13px;font-weight:normal;width:99%;margin:30px 0px 0px 0px;padding:0;clear:right;}
+.boxwhitep{font-family:Verdana, Arial, Helvetica, sans-serif;color:#191919;font-size:13px;font-weight:normal;width:99%;margin:10px 0px 0px 0px;padding:0;}
+
+.body_white3{width:98.5%;height:auto;background-color:#FFFFFF;padding:10px 10px 10px 0px;margin:0;line-height:19px;}
+.body_whitep{width:98.5%;height:auto;background-color:#FFFFFF;padding:10px 10px 10px 10px;margin:0;line-height:19px;}
+
+.body_white3 h1{color:#BA2626;font-size:19px;font-weight:bold;margin:0;padding:10px 0px 4px 0px;clear:right;}
+
+.body_white3 h2{color:#BA2626;font-size:17px;font-weight:bold;margin:0;padding:8px 0px 4px 0px;clear:right;}
+
+.body_white3 h3{color:#BA2626;font-size:15px;font-weight:bold;margin:0;padding:6px 0px 2px 0px;clear:right;}
+
+.body_white3 h4{color:#BA2626;font-size:14px;font-weight:bold;margin:0;padding:5px 0px 2px 0px;clear:right;}
+
+.body_white3 h5{color:#BA2626;font-size:13px;font-weight:bold;margin:0;padding:4px 0px 1px 0px;clear:right;}
+
+.body_white3 h6{color:#BA2626;font-size:12px;font-weight:bold;margin:0;padding:2px 0px 0.5px 0px;clear:right;}
+
+
+.body_white3 a{color:#3B5998;text-decoration:underline;}
+.body_white3 a:hover{color:#3B5998;text-decoration:underline;}
+
+
+.body_white3 ul{
+	width:90%;margin-left:20px;padding:0px 0px 0px 0px;line-height:20px;
+    list-style-type: none;
+	list-style-image: url(/img/fletxa.jpg);
+}
+
+
+.body_white3 li{width:99%;font-family:Verdana, Arial, Helvetica, sans-serif;margin-left:8px;color:#191919;font-size:13px;font-weight:normal;padding:0px 0px 0px 0px;}
+
+.body_white3 li a{color:#3B5998;text-decoration:underline;}
+.body_white3 li a:hover{color:#3B5998;text-decoration:underline;}
+
+.body_white3 label {display:inline;}
+
+.body_white3 img {border:none;} /** No border for images with link **/
+
+.body_white3 .editHelp {display:block}
+
+.body_white3 .printfooter,
+.body_whitep .printfooter {display:none;}
+
+
+/*Editsection*/
+h1 .editsection { font-size: 53%; }
+h2 .editsection { font-size: 67%; }
+h3 .editsection { font-size: 76%; font-weight: normal; }
+h4 .editsection { font-size: 86%; font-weight: normal; }
+h6 .editsection { font-size: 125%; font-weight: normal; }
+
+
+/* thumbnails */
+div.thumb {
+        margin-bottom: .5em;
+        border-style: solid;
+        border-color: white;
+        width: auto;
+}
+div.thumbinner {
+        border: 1px solid #ccc;
+        padding: 3px !important;
+        background-color: #f9f9f9;
+        font-size: 94%;
+        text-align: center;
+        overflow: hidden;
+}
+html .thumbimage {
+        border: 1px solid #ccc;
+}
+html .thumbcaption {
+        border: none;
+        text-align: left;
+        line-height: 1.4em;
+        padding: 3px !important;
+        font-size: 64%;
+}
+
+div.magnify {
+        float: right;
+        border: none !important;
+        background: none !important;
+}
+div.magnify a, div.magnify img {
+        display: block;
+        border: none !important;
+        background: none !important;
+}
+div.tright {
+        clear: right;
+        float: right;
+        border-width: .5em 0 .8em 1.4em;
+}
+div.tleft {
+        float: left;
+        clear: left;
+        margin-right: .5em;
+        border-width: .5em 1.4em .8em 0;
+}
+img.thumbborder {
+        border: 1px solid #dddddd;
+}
+.hiddenStructure {
+        display: none;
+}
+
+/** In wiki portada **/
+.boxpuzzle ul.wikipheader li {font-weight: bold;}
+.boxpuzzle h5 {display: none;}
+
+/*
+** the page-related actions- page/talk, edit etc
+*/
+#p-cactions, #p-views {
+
+	margin-top: -10px;
+	text-align: right;
+	padding-right: 10px;
+        line-height: 25px;
+        list-style: none;
+        font-size: 75%;
+}
+
+#p-cactions h5, #p-views h5 {
+        display: none;
+}
+
+#p-cactions ul, #p-views ul {
+        list-style: none;
+}
+
+#p-cactions li, #p-views li {
+        display: inline;
+        padding: 0 0 0 0;
+        margin: 0 5px 0 0;
+        overflow: visible;
+
+}
+
+#p-cactions li.selected, #p-views li.selected {
+        border-color: #fabd23;
+        padding: 0 0 .2em 0;
+        font-weight: bold;
+}
+
+#p-cactions .pBody li.selected, #p-views .pBody li.selected {
+        padding: 0 0 .2em 0;
+        font-weight: bold;
+	border:none;
+}
+
+
+#p-cactions .hiddenStructure, #p-views .hiddenStructure {
+        display: none;
+}
+#p-cactions li a, #p-views li a {
+        text-transform: lowercase;
+        text-decoration: none;
+}
+
+
+#p-cactions li a:hover, #p-views li a:hover {
+        z-index: 3;
+        text-decoration: underline;
+}
+
+
+/** print this page **/
+
+.impriwiki {
+
+	text-transform: lowercase;
+	margin-top: -10px;
+	margin-bottom: 5px;
+	display:none;
+}
+
+.impriwikifitxa {
+
+        text-transform: lowercase;
+	margin-top: 0px;
+        margin-bottom: 1px;
+	width:98%;
+	display:none;
+}
+
+
+/** Wiki personal links **/
+
+#personal-links {
+margin-top: -5px;
+margin-bottom: 8px;
+}
+
+#wiki_int h2 p {
+    margin-left: 5px;
+    line-height:9px;
+    margin-bottom:1px;
+}
+
+
+#wiki_int .menuwiki h5 {
+	display: none;
+}
+
+#wiki_int .menuwiki ul {
+    padding-left: 0px;
+    line-height: 15px;
+}
+
+/** Categories **/
+#catlinks, #rebost_categories {
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin-top: -10px;
+}
+
+#catlinks {clear:both;}
+
+#catlinks a,
+#rebost_categories a{
+	text-decoration: none;
+}
+
+#catlinks a:hover,
+#rebost_categories a:hover{
+	text-decoration: underline;
+}
+
+/**No en rebost**/
+.oldrebost {font-family:Verdana, Arial, Helvetica, sans-serif; margin-top: -13px; font-size:16px; color: #C50F0B;}
+
+
+/** Extra, imported from Monobook **/
+
+#editcount {
+	display: block;
+	float: left;
+}
+
+fieldset table {
+        /* but keep table layouts in forms clean... */
+        background: none;
+}
+
+fieldset {
+        border: 1px solid;
+        margin: 1em 1em 1em 1em;
+        padding: 0 1em 1em;
+        float: none;
+        display: block;
+        line-height: 1.5em;
+        width: 90%;
+	clear:left;
+}
+fieldset.nested {
+        margin: 0 0 0.5em 0;
+        padding: 0 0.5em 0.5em;
+}
+
+.prefsection fieldset {
+        border: 1px solid #aaa;
+        float: left;
+        margin-right: 2em;
+}
+
+.prefsection table, .prefsection legend {
+        background-color: #F9F9F9;
+}
+
+/** Headers from Rebost & others **/
+
+.rebostwiki, .rebostfitxa {
+background-image:none;
+float:left;
+height:60px;
+margin-top: -10px;
+width:97.5%;
+}
+
+.rebostwiki h1 {
+color:#BA2626;
+font-family:Arial,Helvetica,sans-serif;
+font-size:30px;
+font-weight:bold;
+margin-left:15px;
+}
+
+.rebostfitxa h1 {
+    color: #BA2626;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 90px;
+    margin-right: 0;
+    padding-bottom: 25px;
+}
+
+/** Logofitxa **/
+
+#logofitxa {
+position: absolute;
+top: 2px;
+float: left;
+}
+
+#logofitxa img {
+width:80px;
+height:auto;
+}
+
+/**Breadcrumb**/
+#rebost_categories, #rebost_categories a, #rebost_categories a:hover{
+	color:#6C6C6B;
+	font-size:11px;
+	font-weight:bold;
+}
+
+#projectes_categories, #projectes_categories a, #projectes_categories a:hover{
+        font-size:11px;
+	font-weight:bold;
+}
+
+/**Captura fitxa**/
+
+.capturafitxa img {
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 15px;
+}
+
+#fitxarebost {
+
+margin-top:-20px;
+
+}
+
+.body_white3 .colder .topdescarrega h1 {
+color:#FFFFFF;
+float:left;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;
+left:10px;
+margin:0pt;
+padding:0pt;
+position:relative;
+top:10px;
+width:50%;
+}
+
+
+.llistagris {
+border-top:none;
+}
+
+.colder .gris2 h2 {
+clear:none;
+color:#C60C3F;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:11px;
+font-weight:bold;
+padding: 0px 0px 0px 0px;
+}
+
+.colder .gris2 p {
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:10px;
+line-height:11px;
+}
+
+.boxwhite2 p{
+font-size:13px;
+line-height:19px;
+}
+
+.colder .gris h1 {
+color:#BA2626;
+float:left;
+font-family:Verdana,Arial,Helvetica,sans-serif;
+font-size:13px;
+font-weight:bold;
+left:10px;
+margin:4px 0px 0px;
+padding:0px 0px 4px;
+position:relative;
+width:80%;
+}
+
+/**Pre_warning**/
+
+#contact_warning {
+display:none;
+}
+
+#pre_contact_warning h2 a {
+color:#BA2626;
+font-size:18px;
+font-weight:bold;
+margin:0pt;
+padding:8px 0px 4px;
+text-decoration:none;
+}
+
+#pre_contact_warning h2 a:hover {
+color:#BA2626;
+text-decoration:underline;
+}
+
+/**Icones a caixa**/
+
+.midabaixa {
+font-size: 9px;
+font-weight: normal;
+}
+
+#llistawin, #llistalin, #llistamac {
+	display:none;
+}
+
+.mediawiki .lin5 {
+width:98.5%;
+}
+
+.ns-100 .lin5 {
+margin-left:0px;
+width: 98.5%;
+}
+
+.capturafitxa img{
+max-width:190px;
+height:auto;
+text-align:left;
+}
+
+/** Avisos rebost **/
+#desactualitzat, #obsolet {
+border: 1px solid #f48625;
+-webkit-border-radius: 1%;
+-moz-border-radius: 1%;
+-o-border-radius: 1%;
+border-radius: 1%;
+background-color: #ffd27a;
+color:#191919;
+font-size:14px;
+margin:10px 0;
+padding: 10px;
+width:94%;
+display:block;
+}
+
+#desactualitzat a, #obsolet a {
+color: #C50F0B;
+font-size: 15px;
+font-weight: bold;
+}
+
+
+/** Imported floats from monobook **/
+
+/* images */
+div.floatright, table.floatright {
+        clear: right;
+        float: right;
+        position: relative;
+        margin: 0 0 .5em .5em;
+        border: 0;
+/*
+        border: .5em solid white;
+        border-width: .5em 0 .8em 1.4em;
+*/
+}
+div.floatright p { font-style: italic; }
+div.floatleft, table.floatleft {
+        float: left;
+        clear: left;
+        position: relative;
+        margin: 0 .5em .5em 0;
+        border: 0;
+/*
+        margin: .3em .5em .5em 0;
+        border: .5em solid white;
+        border-width: .5em 1.4em .8em 0;
+*/
+}
+div.floatleft p { font-style: italic; }
+/* thumbnails */
+div.thumb {
+        margin-bottom: .5em;
+        border-style: solid;
+        border-color: white;
+        width: auto;
+}
+
+div.thumbinner {
+        border: 1px solid #ccc;
+        padding: 3px !important;
+        background-color: #f9f9f9;
+        font-size: 94%;
+        text-align: center;
+        overflow: hidden;
+}
+html .thumbimage {
+        border: 1px solid #ccc;
+}
+html .thumbcaption {
+        border: none;
+        text-align: left;
+        line-height: 1.4em;
+        padding: 3px !important;
+        font-size: 94%;
+}
+div.magnify {
+        float: right;
+        border: none !important;
+        background: none !important;
+}
+div.magnify a, div.magnify img {
+        display: block;
+        border: none !important;
+        background: none !important;
+}
+
+div.tright {
+        clear: right;
+        float: right;
+        border-width: .5em 0 .8em 1.4em;
+}
+div.tleft {
+        float: left;
+        clear: left;
+        margin-right: .5em;
+        border-width: .5em 1.4em .8em 0;
+}
+img.thumbborder {
+        border: 1px solid #dddddd;
+}
+
+/* filetoc */
+ul#filetoc {
+        text-align: center;
+        padding: 5px;
+        font-size: 95%;
+        margin-bottom: 0.5em;
+        margin-left: 0;
+        margin-right: 0;
+}
+
+#filetoc li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 2em;
+}
+
+div.fullImageLink {
+clear:right;
+}
+
+/** Per a articles **/
+
+sub, sup { text-decoration: none; }
+
+.portadawiki{
+display:block;
+width:47.5%;
+}
+
+.quasipercent{
+display:block;
+width:98%;
+}
+
+.clearright{
+clear:right;
+}
+
+#footer #f-list, #footer #footer-info {
+margin-left:auto;
+margin-right:auto;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+
+#footer #f-list li, #footer #footer-info li {
+display:inline;
+margin:0 10px 0 0;
+overflow:visible;
+padding:0;
+font-size:9px;
+}
+
+#footer #f-list #copyright, #footer #footer-info #copyright {
+display:block;
+}
+
+#footer #footer-places {
+	display: none;
+}
+
+
+.rebostfitxa h1.tit1{
+font-size:15px;
+}
+
+.rebostfitxa h1.tit2{
+font-size:20px;
+
+}
+
+.rebostfitxa h1.tit3{
+font-size:22px;
+}
+
+.rebostfitxa h1.tit4{
+font-size:25px;
+}
+
+
+/** pre cleaning **/
+pre {clear:both;}
+
+/** Clear redirecting in Rebost **/
+
+.rebostfitxa #contentSub {
+}
+
+.rebostfitxa #contentSub #rebost_categories {
+	display:block;
+}
+
+/** Red links **/
+.body_white3 a.new {
+color:#CC2200;
+}
+
+.body_white3 li a.new {
+color:#CC2200;
+}
+
+a.external {
+background:transparent url(external.png) no-repeat scroll right center;
+padding:0px 12px 0px 0px;
+}
+
+.menucentral a.external, #fitxarebost a.external, .impriwiki a.external {
+background:none;
+padding:0px 0px 0px 0px;
+}
+
+/** Fix search and prefs **/
+.mw-search-formheader div.search-types {float:none !important;}
+.mw-search-formheader div.search-types ul li {width: auto !important;}
+table#mw-search-top-table {clear:both !important;}
+.mw-search-formheader div.results-info {float:none;}
