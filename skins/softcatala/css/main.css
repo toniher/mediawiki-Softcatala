@@ -766,3 +766,11 @@ padding:0px 0px 0px 0px;
 .mw-search-formheader div.search-types ul li {width: auto !important;}
 table#mw-search-top-table {clear:both !important;}
 .mw-search-formheader div.results-info {float:none;}
+
+/** Fitxa Rebost **/
+
+.logofitxa {
+    float: left;
+    margin-right: 1em;
+}
+

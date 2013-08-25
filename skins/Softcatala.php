@@ -358,7 +358,8 @@ class SoftcatalaTemplate extends BaseTemplate {
 		echo '<div class="'.$fitxa.'">';
 		
 		if ($fitxa == 'rebostfitxa') {
-			echo '<div class="logofitxa"></div>';
+			// Placeholder temporal logo
+			echo '<div class="logofitxa"><img src="/w/images/c/c0/Ico_llengua.jpg"></div>';
 		}
 		
 		echo '
