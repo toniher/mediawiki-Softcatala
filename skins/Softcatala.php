@@ -326,10 +326,9 @@ class SoftcatalaTemplate extends BaseTemplate {
 		//	$rebost = "rebostwiki";
 		//}
 		//
-		//if (preg_match("/^Projectes\/.*$/", $wgTitle)) {
-		// 
-		//	  $rebost = "projectespage";
-		//}
+		if (preg_match("/^Projectes/", $alltitle)) { 
+			$fitxa = "boxprojectes projectespage";
+		}
 		// 
 		//if (preg_match("/^Linux\/.*$/", $wgTitle)) {
 		//
@@ -356,7 +355,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		//	
 		//
 		
-		echo '<div class="boxprojectes '.$fitxa.'">';
+		echo '<div class="'.$fitxa.'">';
 		
 		if ($fitxa == 'rebostfitxa') {
 			echo '<div class="logofitxa"></div>';
