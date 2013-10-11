@@ -12,27 +12,10 @@ if (triaform=="0") {
 	//Modify DOM
 	var f = document.forms['cercaform'];
 	var cercatext = document.getElementById('es');
-	cercatext.setAttribute('name', 'q');
-	f.setAttribute('action', '/wiki/Wiki_de_Softcatalà:Cerca');
+	cercatext.setAttribute('name', 'keys');
+	f.setAttribute('action', '/search/node');
 
-    var sgoogle1 = document.createElement("input"); sgoogle1.setAttribute('name', 'sitesearch'); sgoogle1.setAttribute('value', 'softcatala.org');
-    sgoogle1.setAttribute('type', 'hidden'); f.appendChild(sgoogle1);
-    var sgoogle2 = document.createElement("input"); sgoogle2.setAttribute('name', 'client'); sgoogle2.setAttribute('value', 'pub-5137971297629213');
-    sgoogle2.setAttribute('type', 'hidden'); f.appendChild(sgoogle2);
-    var sgoogle3 = document.createElement("input"); sgoogle3.setAttribute('name', 'forid'); sgoogle3.setAttribute('value', '1');
-    sgoogle3.setAttribute('type', 'hidden'); f.appendChild(sgoogle3);
-    var sgoogle4 = document.createElement("input"); sgoogle4.setAttribute('name', 'ie'); sgoogle4.setAttribute('value', 'UTF-8');
-    sgoogle4.setAttribute('type', 'hidden'); f.appendChild(sgoogle4);
-    var sgoogle5 = document.createElement("input"); sgoogle5.setAttribute('name', 'oe'); sgoogle5.setAttribute('value', 'UTF-8');
-    sgoogle5.setAttribute('type', 'hidden'); f.appendChild(sgoogle5);
-    var sgoogle6 = document.createElement("input"); sgoogle6.setAttribute('name', 'safe'); sgoogle6.setAttribute('value', 'active');
-    sgoogle6.setAttribute('type', 'hidden'); f.appendChild(sgoogle6);
-    var sgoogle7 = document.createElement("input"); sgoogle7.setAttribute('name', 'cof'); sgoogle7.setAttribute('value', 'GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFCC;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:11');
-    sgoogle7.setAttribute('type', 'hidden'); f.appendChild(sgoogle7);
-    var sgoogle8 = document.createElement("input"); sgoogle8.setAttribute('name', 'hl'); sgoogle8.setAttribute('value', 'ca');
-    sgoogle8.setAttribute('type', 'hidden'); f.appendChild(sgoogle8);
-
-    removeElement('fulltextsearch');
+	removeElement('fulltextsearch');
 
 }
 
@@ -42,23 +25,16 @@ if (triaform=="1") {
 	var f = document.forms['cercaform'];
 	var cercatext = document.getElementById('es');
 	cercatext.setAttribute('name', 'search');
-	f.setAttribute('action', '/wiki/Especial:Search');
+	f.setAttribute('action', '/wiki/Especial:Cerca');
+	removeElement('ns100search');
+	
+	var fulltext = document.createElement("input");
+	fulltext.setAttribute('name', 'fulltext');
+	fulltext.setAttribute('value', 'yes');
+	fulltext.setAttribute('id', 'fulltextsearch');
+	fulltext.setAttribute('type', 'hidden');
+	f.appendChild(fulltext);
 
-	removeElement('sgoogle1');
-	removeElement('sgoogle2');
-	removeElement('sgoogle3');
-	removeElement('sgoogle4');
-	removeElement('sgoogle5');
-	removeElement('sgoogle6');
-	removeElement('sgoogle7');
-	removeElement('sgoogle8');
-
-    var fulltext = document.createElement("input");
-    fulltext.setAttribute('name', 'fulltext');
-    fulltext.setAttribute('value', 'yes');
-    fulltext.setAttribute('id', 'fulltextsearch');
-    fulltext.setAttribute('type', 'hidden');
-    f.appendChild(fulltext);
 
 }
 
@@ -70,16 +46,31 @@ if (triaform=="2") {
 	cercatext.setAttribute('name', 'keywords');
 	f.setAttribute('action', '/forum/search.php');
 
-	removeElement('sgoogle1');
-	removeElement('sgoogle2');
-	removeElement('sgoogle3');
-	removeElement('sgoogle4');
-	removeElement('sgoogle5');
-	removeElement('sgoogle6');
-	removeElement('sgoogle7');
-	removeElement('sgoogle8');
 	removeElement('fulltextsearch');
 
+}
+
+if (triaform=="3") {
+
+	//Modify DOM
+	var f = document.forms['cercaform'];
+	var cercatext = document.getElementById('es');
+	cercatext.setAttribute('name', 'search');
+	f.setAttribute('action', '/wiki/Especial:Cerca');
+
+	var fulltext = document.createElement("input");
+	fulltext.setAttribute('name', 'fulltext');
+	fulltext.setAttribute('value', 'yes');
+	fulltext.setAttribute('id', 'fulltextsearch');
+	fulltext.setAttribute('type', 'hidden');
+	f.appendChild(fulltext);
+
+	var ns100 = document.createElement("input");
+	ns100.setAttribute('name', 'ns100');
+	ns100.setAttribute('value', '1');
+	ns100.setAttribute('id', 'ns100search');
+	ns100.setAttribute('type', 'hidden');
+	f.appendChild(ns100);
 }
 
 }

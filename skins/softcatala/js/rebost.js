@@ -201,3 +201,12 @@ function canviafons (llista, sistema) {
 		}
 	}
 }
+
+/** Move icon **/
+$(document).on( "ready", function() { 
+	$(".logofitxa").empty();
+	var logofitxa = $("#logofitxa").children().html();
+	$(".logofitxa").html(logofitxa);
+
+});
+
