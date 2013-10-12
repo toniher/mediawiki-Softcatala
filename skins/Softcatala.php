@@ -817,7 +817,9 @@ class SoftcatalaTemplate extends BaseTemplate {
 
 			$textcatrebost.='<div id="rebost_categories">';
 			$endcat = preg_replace("/^.*\>Rebost\s+/", "", $categories[0]);
-			$endcat = strip_tags($end_cat);
+			
+			$endcat = preg_replace("/\<\/a\>\<\/span\>/", "", $endcat);
+			$endcat = preg_replace("/\<\/div\>\<\/div\>/", "", $endcat);
 	
 			$endrebost.='Rebost '.$endcat;
 	
