@@ -821,7 +821,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			$endcat = preg_replace("/\<\/a\>\<\/span\>/", "", $endcat);
 			$endcat = preg_replace("/\<\/div\>\<\/div\>/", "", $endcat);
 	
-			$endrebost.='Rebost '.$endcat;
+			$endrebost ='Rebost '.$endcat;
 	
 			$parts = preg_split("/\s/", $endrebost);
 		
