@@ -830,7 +830,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			for ($i=0; $i<count($parts); $i++) {
 	
 				if ($i==0) {
-					$textcatrebost.= '<a href="/wiki/Categoria:'.$parts[$i]. '">'.$parts[$i].'</a> ';
+					$textcatrebost.= '<a href="/wiki/Categoria:'.strip_tags($parts[$i]). '">'.strip_tags($parts[$i]).'</a> ';
 				}
 	
 				else {
@@ -847,7 +847,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			for ($v=1; $v<count($categories); $v++) {
 		
 				if (preg_match('/Windows/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Windows">Windows</a> ';			
+					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Windows">Windows</a> ';
 					$recatcount++;	
 				}
 	
