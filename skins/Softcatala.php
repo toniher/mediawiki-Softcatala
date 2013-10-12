@@ -378,8 +378,8 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 		$this->html('subtitle');
 		
-		if ($fitxa == 'rebostfixa') {
-			echo rebostcategories();
+		if ($fitxa == 'rebostfitxa') {
+			echo $this->rebostcategories();
 		}
 		
 		echo '</div>
@@ -811,12 +811,13 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$categories = preg_split("/\s\|\s/", $categoriesall);	
 
 		$recatcount = 0;
+		$textcatrebost = "";
+		
 		if (count($categories>1)) {
 
 			$textcatrebost.='<div id="rebost_categories">';
 			$endcat = preg_replace("/^.*\>Rebost\s+/", "", $categories[0]);
-			$endcat = preg_replace("/\<\/a\>\<\/span\>/", "", $endcat);
-			$endcat = preg_replace("/\<\/div\>\<\/div\>/", "", $endcat);
+			$endcat = strip_tags($end_cat);
 	
 			$endrebost.='Rebost '.$endcat;
 	
