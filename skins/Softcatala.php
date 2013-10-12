@@ -810,82 +810,47 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 		$categories = preg_split("/\s\|\s/", $categoriesall);	
 
-		$recatcount = 0;
 		$textcatrebost = "";
-		
+
+		$textcatrebost.='<div id="rebost_categories">';
+
+		$textcatrebost.= '<a href="/wiki/Categoria:Rebost">Rebost</a> ';
+
+		$detectso = array("Windows", "Linux", "Mac", "Web", "Android", "Mòbil", "iOS");
+
 		if (count($categories>1)) {
 
-			$textcatrebost.='<div id="rebost_categories">';
-			$endcat = preg_replace("/^.*\>Rebost\s+/", "", $categories[0]);
-			
-			$endcat = preg_replace("/\<\/a\>\<\/span\>/", "", $endcat);
-			$endcat = preg_replace("/\<\/div\>\<\/div\>/", "", $endcat);
+			$endcat =  strip_tags($categories[0]);
+			$endcat = str_replace("Categories: ", "", $endcat);
+			$endcat = str_replace(" ", "_", $endcat);	
 	
-			$endrebost ='Rebost '.$endcat;
-	
-			$parts = preg_split("/\s/", $endrebost);
-		
-			$endrebostf = preg_replace("/\s+/", "_", $endrebost);
-	 
+			$parts = explode("Rebost", $endcat);
+
 			for ($i=0; $i<count($parts); $i++) {
 	
-				if ($i==0) {
-					$textcatrebost.= '<a href="/wiki/Categoria:'.strip_tags($parts[$i]). '">'.strip_tags($parts[$i]).'</a> ';
-				}
-	
-				else {
-					$pre = $parts[0];
-					for($y=1; $y<$i+1; $y++) {
-						$pre.= "_".$parts[$y];
+				$parts[$i] = preg_replace('/^_/', '', $parts[$i]);
+				$cleanpart = str_replace("_", " ", $parts[$i]);
+				$cleanpart = preg_replace('/·/', ' ', $cleanpart);
+				if (! empty($cleanpart) ) {
+
+					$recatcount = 0;
+					foreach ($detectso as $so) {
+						if ( strpos( $cleanpart, $so ) ) {
+							$textcatrebost.= '| <a href="/wiki/Categoria:Rebost_'.$parts[$i]. '">'.$so.'</a> ';
+							$recatcount++;
+						}
+
 					}
-					$parts[$i] = preg_replace('/·/', ' ', $parts[$i]);
-					$textcatrebost.= '» <a href="/wiki/Categoria:'.$pre.'">'.$parts[$i].'</a> ';
-				}
-			}
 			
-	
-			for ($v=1; $v<count($categories); $v++) {
-		
-				if (preg_match('/Windows/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Windows">Windows</a> ';
-					$recatcount++;	
+					if ($recatcount == 0) {
+						$textcatrebost.= '» <a href="/wiki/Categoria:Rebost_'.$parts[$i]. '">'.$cleanpart.'</a> ';
+					}
 				}
-	
-				if (preg_match ('/Linux/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Linux">Linux</a> ';
-					$recatcount++;
-				}
-	
-				if (preg_match ('/Mac/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Mac">Mac</a> ';
-					$recatcount++;
-				}
-	
-				if (preg_match ('/Web/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Web">Web</a> ';
-					$recatcount++;
-				}
-	
-				if (preg_match ('/Android/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Android">Android</a> ';
-					$recatcount++;
-				}
-	
-				if (preg_match ('/Mòbil/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_Mòbil">Mòbil</a> ';
-					$recatcount++;
-				}
-	
-				if (preg_match ('/iOS/', $categories[$v])) {
-					$textcatrebost.= '| <a href="/wiki/Categoria:'.$endrebostf.'_iOS">iOS</a> ';
-					$recatcount++;
-				}
-				
 			}
 		
-			$textcatrebost.= '</div>';
-	
 		}
+
+		$textcatrebost.= '</div>';
 		
 		return $textcatrebost;
 	}
