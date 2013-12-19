@@ -252,16 +252,16 @@ label{display:none;}
 .grid370 ul, .grid370b ul{width:99%;float:left;padding:0px 0px 0px 0px;margin:7px 0px 0px 0px;list-style:none;}
 
 .grid370 li, .grid370b li{width:99%;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;color:#000000;font-weight:normal;padding:0px 0px 0px 0px;margin:7px 0px 0px 0px;}
-.grid370 li a, .grid370b li a{color:#3A33AB;text-decoration:underline;}
-.grid370 li a:hover, .grid370b li a:hover{color:#3A33AB;text-decoration:underline;}
+.grid370 li a, .grid370b li a{ text-decoration:underline; }
+.grid370 li a:hover, .grid370b li a:hover{ text-decoration:underline; }
 
 .menu{width:auto;display:block;float:none;}
 
 .menu ul{width:48%;float:left;display:inline;padding:0px 0px 0px 0px;margin:7px 0px 0px 0px;list-style:none;}
 
-.menu  li{width:99%;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;color:#000000;font-weight:normal;padding:0px 0px 0px 10px;margin:7px 0px 0px 0px;background-image:url(/img/flecha.jpg);background-repeat:no-repeat;background-position:left center;float:left;}
-.menu  li a{color:#3A33AB;text-decoration:underline;}
-.menu  li a:hover{color:#3A33AB;text-decoration:underline;}
+.menu li { width:99%;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:13px;color:#000000;font-weight:normal;padding:0px 0px 0px 10px;margin:7px 0px 0px 0px;background-image:url(/img/flecha.jpg);background-repeat:no-repeat;background-position:left center;float:left; }
+.menu li a { text-decoration:underline; }
+.menu li a:hover { text-decoration:underline; }
 
 #db1{display:block;float:left;width:180px;}
 #db2{display:block;float:left;width:300px;}
@@ -271,7 +271,7 @@ label{display:none;}
 
 
 
-#icopos{background-image:url(/img/flecha2.jpg);background-position:top left;}
+#icopos{ background-image:url(/img/flecha2.jpg);background-position:top left; }
 
 .bot_comprova{width:154px;position:relative;display:inline;top:-20px;float:right;}
 
