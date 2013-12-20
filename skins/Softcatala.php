@@ -169,7 +169,8 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$ns = $this->getThemeContext('ns');
 		$alltitle = $this->getThemeContext('alltitle');
 		$titleshow = $this->getThemeContext('title');
-		
+		$subtitle = $this->getThemeContext('subtitle');
+	
 		$fitxa = $this->assignClass( $ns, $alltitle, $titleshow );
 		
 		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$fitxa.'">';
@@ -218,7 +219,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
 			<!-- /sitenotice -->
 			<?php endif; ?>
-			<?php $this->renderGridFull( $fitxa, $titleshow ) ?>
+			<?php $this->renderGridFull( $fitxa, $titleshow, $subtitle ) ?>
 		</div>
 		
 		<!-- bodyContent -->
@@ -329,7 +330,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		return $fitxa;
 	}
 	
-	private function renderGridFull( $fitxa, $titleshow ) {
+	private function renderGridFull( $fitxa, $titleshow, $subtitle ) {
 		
 		
 		echo '<div class="fitxa-'.$fitxa.'">';
@@ -345,6 +346,8 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 		if ( $fitxa == 'rebostfitxa' || $fitxa == 'rebostwiki' ) {
 			echo $titleshow;
+		} elseif ( $fitxa == 'projectes' ) {
+			echo $subtitle;
 		} else {
 			$this->html('title');
 		}
@@ -692,6 +695,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$HMainpage = false;
 		$HTitle = "";
 		$HATitle = "";
+		$HSTitle = "";
 		$HNS = "0";
 		$HUGroups = array();
 		$HAction = "";
@@ -705,7 +709,10 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 		$HTitle = $thTitle->getText();
 		
-		$HATitle = $thTitle->getPrefixedText();	
+		$HATitle = $thTitle->getPrefixedText();
+		
+		$HSTitle = $thTitle->getSubpageText();
+
 		
 		$HNS = $thTitle->getNamespace();
 		$HUGroups = $wgUser->getEffectiveGroups();
@@ -723,14 +730,18 @@ class SoftcatalaTemplate extends BaseTemplate {
 
 		$HAction = $wgRequest->getText('action');
 
-		if ($thTitle->isMainPage()) {$HMainpage = true;}
+		if ( $thTitle->isMainPage() ) { $HMainpage = true; }
 
-		if ($ask == 'title') {
+		if ( $ask == 'title' ) {
 			return $HTitle;
 		}
 		
-		if ($ask == 'alltitle') {
+		if ( $ask == 'alltitle' ) {
 			return $HATitle;
+		}
+		
+		if ( $ask == 'subtitle' ) {
+			return $HSTitle;
 		}
 		
 		if ($ask == 'mainpage') {
