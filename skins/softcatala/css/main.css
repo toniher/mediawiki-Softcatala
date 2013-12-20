@@ -53,45 +53,45 @@ padding-right:3px;
 
 /**TOC Preferències **/
 
-#preftoc {
-clear:both;
-margin:0;
-padding:0;
-width:100%;
+	#preftoc {
+	clear:both;
+	margin:0;
+	padding:0;
+	width:100%;
 }
 
 #preftoc > li.selected {
-top:2px;
+	top:2px;
 }
 #preftoc li.selected {
-background-color:#F9F9F9;
-border-color:#AAAAAA;
-border-style:solid solid none;
-border-width:1px 1px medium;
-cursor:default;
-font-weight:bold;
-margin-right:-3px;
-padding-top:2px;
-top:1px;
+	background-color:#F9F9F9;
+	border-color:#AAAAAA;
+	border-style:solid solid none;
+	border-width:1px 1px medium;
+	cursor:default;
+	font-weight:bold;
+	margin-right:-3px;
+	padding-top:2px;
+	top:1px;
 }
 
 #preftoc li {
-border-color:#FFFFFF;
-border-style:solid solid none;
-border-width:1px 1px 0;
-float:left;
-list-style-image:none;
-list-style-type:none;
-margin:1px -2px 1px 2px;
-padding:2px 0 3px;
-position:relative;
-white-space:nowrap;
-z-index:3;
+	border-color:#FFFFFF;
+	border-style:solid solid none;
+	border-width:1px 1px 0;
+	float:left;
+	list-style-image:none;
+	list-style-type:none;
+	margin:1px -2px 1px 2px;
+	padding:2px 0 3px;
+	position:relative;
+	white-space:nowrap;
+	z-index:3;
 }
 
 #preftoc li {
-background-color:#F0F0F0;
-color:#000000;
+	background-color:#F0F0F0;
+	color:#000000;
 }
 
 /** Table diff **/
@@ -135,7 +135,7 @@ clear:both;
 
 .body_white3 ul{
 	width:90%;margin-left:20px;padding:0px 0px 0px 0px;line-height:20px;
-    list-style-type: none;
+	list-style-type: none;
 	list-style-image: url(/img/fletxa.jpg);
 }
 
@@ -165,56 +165,56 @@ h6 .editsection { font-size: 125%; font-weight: normal; }
 
 /* thumbnails */
 div.thumb {
-        margin-bottom: .5em;
-        border-style: solid;
-        border-color: white;
-        width: auto;
+	margin-bottom: .5em;
+	border-style: solid;
+	border-color: white;
+	width: auto;
 }
 div.thumbinner {
-        border: 1px solid #ccc;
-        padding: 3px !important;
-        background-color: #f9f9f9;
-        font-size: 94%;
-        text-align: center;
-        overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 3px !important;
+	background-color: #f9f9f9;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
 }
 html .thumbimage {
-        border: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 html .thumbcaption {
-        border: none;
-        text-align: left;
-        line-height: 1.4em;
-        padding: 3px !important;
-        font-size: 64%;
+	border: none;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 3px !important;
+	font-size: 64%;
 }
 
 div.magnify {
-        float: right;
-        border: none !important;
-        background: none !important;
+	float: right;
+	border: none !important;
+	background: none !important;
 }
 div.magnify a, div.magnify img {
-        display: block;
-        border: none !important;
-        background: none !important;
+	display: block;
+	border: none !important;
+	background: none !important;
 }
 div.tright {
-        clear: right;
-        float: right;
-        border-width: .5em 0 .8em 1.4em;
+	clear: right;
+	float: right;
+	border-width: .5em 0 .8em 1.4em;
 }
 div.tleft {
-        float: left;
-        clear: left;
-        margin-right: .5em;
-        border-width: .5em 1.4em .8em 0;
+	float: left;
+	clear: left;
+	margin-right: .5em;
+	border-width: .5em 1.4em .8em 0;
 }
 img.thumbborder {
-        border: 1px solid #dddddd;
+	border: 1px solid #dddddd;
 }
 .hiddenStructure {
-        display: none;
+	display: none;
 }
 
 /** In wiki portada **/
@@ -229,9 +229,9 @@ img.thumbborder {
 	margin-top: -10px;
 	text-align: right;
 	padding-right: 10px;
-        line-height: 25px;
-        list-style: none;
-        font-size: 75%;
+	line-height: 25px;
+	list-style: none;
+	font-size: 75%;
 }
 
 #p-cactions h5, #p-views h5 {
@@ -243,16 +243,16 @@ img.thumbborder {
 }
 
 #p-cactions li, #p-views li {
-        display: inline;
-        padding: 0 0 0 0;
-        margin: 0 5px 0 0;
-        overflow: visible;
+	display: inline;
+	padding: 0 0 0 0;
+	margin: 0 5px 0 0;
+	overflow: visible;
 
 }
 
 #p-cactions li.selected, #p-views li.selected {
-        padding: 0 0 .2em 0;
-        font-weight: bold;
+	padding: 0 0 .2em 0;
+	font-weight: bold;
 	border-style: none;
 }
 
@@ -267,14 +267,14 @@ img.thumbborder {
         display: none;
 }
 #p-cactions li a, #p-views li a {
-        text-transform: lowercase;
-        text-decoration: none;
+	text-transform: lowercase;
+	text-decoration: none;
 }
 
 
 #p-cactions li a:hover, #p-views li a:hover {
-        z-index: 3;
-        text-decoration: underline;
+	z-index: 3;
+	text-decoration: underline;
 }
 
 
@@ -289,10 +289,9 @@ img.thumbborder {
 }
 
 .impriwikifitxa {
-
-        text-transform: lowercase;
+	text-transform: lowercase;
 	margin-top: 0px;
-        margin-bottom: 1px;
+	margin-bottom: 1px;
 	width:98%;
 	display:none;
 }
@@ -301,14 +300,14 @@ img.thumbborder {
 /** Wiki personal links **/
 
 #personal-links {
-margin-top: -5px;
-margin-bottom: 8px;
+	margin-top: -5px;
+	margin-bottom: 8px;
 }
 
 #wiki_int h2 p {
-    margin-left: 5px;
-    line-height:9px;
-    margin-bottom:1px;
+	margin-left: 5px;
+	line-height:9px;
+	margin-bottom:1px;
 }
 
 
@@ -317,8 +316,8 @@ margin-bottom: 8px;
 }
 
 #wiki_int .menuwiki ul {
-    padding-left: 0px;
-    line-height: 15px;
+	padding-left: 0px;
+	line-height: 15px;
 }
 
 /** Categories **/
@@ -344,7 +343,7 @@ margin-bottom: 8px;
 	text-decoration: underline;
 }
 
-rebostwiki #catlinks, .rebostfitxa #catlinks {
+.rebostwiki #catlinks, .rebostfitxa #catlinks, .rebostwiki .lindot, .rebostfitxa .lindot {
 	display: none;
 }
 
@@ -360,61 +359,61 @@ rebostwiki #catlinks, .rebostfitxa #catlinks {
 }
 
 fieldset table {
-        /* but keep table layouts in forms clean... */
-        background: none;
+	/* but keep table layouts in forms clean... */
+	background: none;
 }
 
 fieldset {
-        border: 1px solid;
-        margin: 1em 1em 1em 1em;
-        padding: 0 1em 1em;
-        float: none;
-        display: block;
-        line-height: 1.5em;
-        width: 90%;
+	border: 1px solid;
+	margin: 1em 1em 1em 1em;
+	padding: 0 1em 1em;
+	float: none;
+	display: block;
+	line-height: 1.5em;
+	width: 90%;
 	clear:left;
 }
 fieldset.nested {
-        margin: 0 0 0.5em 0;
-        padding: 0 0.5em 0.5em;
+	margin: 0 0 0.5em 0;
+	padding: 0 0.5em 0.5em;
 }
 
 .prefsection fieldset {
-        border: 1px solid #aaa;
-        float: left;
-        margin-right: 2em;
+	border: 1px solid #aaa;
+	float: left;
+	margin-right: 2em;
 }
 
 .prefsection table, .prefsection legend {
-        background-color: #F9F9F9;
+	background-color: #F9F9F9;
 }
 
 /** Headers from Rebost & others **/
 
-.rebostwiki, .rebostfitxa {
-background-image:none;
-float:left;
-height:60px;
-margin-top: -10px;
-width:97.5%;
+.firxa-rebostwiki, .fitxa-rebostfitxa {
+	background-image:none;
+	float:left;
+	height:60px;
+	margin-top: -10px;
+	width:97.5%;
 }
 
-.rebostwiki h1 {
-color:#BA2626;
-font-family:Arial,Helvetica,sans-serif;
-font-size:30px;
-font-weight:bold;
-margin-left:15px;
+.fitxa-rebostwiki h1 {
+	color:#BA2626;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:30px;
+	font-weight:bold;
+	margin-left:15px;
 }
 
-.rebostfitxa h1 {
-    color: #BA2626;
-    font-family: Arial,Helvetica,sans-serif;
-    font-size: 32px;
-    font-weight: bold;
-    margin-left: 90px;
-    margin-right: 0;
-    padding-bottom: 25px;
+.fitxa-rebostfitxa h1 {
+	color: #BA2626;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	margin-left: 90px;
+	margin-right: 0;
+	padding-bottom: 25px;
 }
 
 /** Logofitxa **/
@@ -440,94 +439,100 @@ margin-left:15px;
 /**Captura fitxa**/
 
 .capturafitxa img {
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 15px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 15px;
 }
 
+/** Logo fitxa 
 #fitxarebost {
-
-margin-top:-20px;
-
+	margin-top:-20px;
 }
+**/
+.logofitxa {
+	float: left;
+	margin-right: 1em;
+}
+
+
 
 .body_white3 .colder .topdescarrega h1 {
-color:#FFFFFF;
-float:left;
-font-family:Verdana,Arial,Helvetica,sans-serif;
-font-size:13px;
-left:10px;
-margin:0pt;
-padding:0pt;
-position:relative;
-top:10px;
-width:50%;
+	color:#FFFFFF;
+	float:left;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:13px;
+	left:10px;
+	margin:0pt;
+	padding:0pt;
+	position:relative;
+	top:10px;
+	width:50%;
 }
 
 
 .llistagris {
-border-top:none;
+	border-top:none;
 }
 
 .colder .gris2 h2 {
-clear:none;
-color:#C60C3F;
-font-family:Verdana,Arial,Helvetica,sans-serif;
-font-size:11px;
-font-weight:bold;
-padding: 0px 0px 0px 0px;
+	clear:none;
+	color:#C60C3F;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	padding: 0px 0px 0px 0px;
 }
 
 .colder .gris2 p {
-font-family:Verdana,Arial,Helvetica,sans-serif;
-font-size:10px;
-line-height:11px;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:10px;
+	line-height:11px;
 }
 
 .boxwhite2 p{
-font-size:13px;
-line-height:19px;
+	font-size:13px;
+	line-height:19px;
 }
 
 .colder .gris h1 {
-color:#BA2626;
-float:left;
-font-family:Verdana,Arial,Helvetica,sans-serif;
-font-size:13px;
-font-weight:bold;
-left:10px;
-margin:4px 0px 0px;
-padding:0px 0px 4px;
-position:relative;
-width:80%;
+	color:#BA2626;
+	float:left;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	left:10px;
+	margin:4px 0px 0px;
+	padding:0px 0px 4px;
+	position:relative;
+	width:80%;
 }
 
 /**Pre_warning**/
 
 #contact_warning {
-display:none;
+	display:none;
 }
 
 #pre_contact_warning h2 a {
-color:#BA2626;
-font-size:18px;
-font-weight:bold;
-margin:0pt;
-padding:8px 0px 4px;
-text-decoration:none;
+	color:#BA2626;
+	font-size:18px;
+	font-weight:bold;
+	margin:0pt;
+	padding:8px 0px 4px;
+	text-decoration:none;
 }
 
 #pre_contact_warning h2 a:hover {
-color:#BA2626;
-text-decoration:underline;
+	color:#BA2626;
+	text-decoration:underline;
 }
 
 /**Icones a caixa**/
 
 .midabaixa {
-font-size: 9px;
-font-weight: normal;
+	font-size: 9px;
+	font-weight: normal;
 }
 
 #llistawin, #llistalin, #llistamac {
@@ -535,40 +540,40 @@ font-weight: normal;
 }
 
 .mediawiki .lin5 {
-width:98.5%;
+	width:98.5%;
 }
 
 .ns-100 .lin5 {
-margin-left:0px;
-width: 98.5%;
+	margin-left:0px;
+	width: 98.5%;
 }
 
 .capturafitxa img{
-max-width:190px;
-height:auto;
-text-align:left;
+	max-width:190px;
+	height:auto;
+	text-align:left;
 }
 
 /** Avisos rebost **/
 #desactualitzat, #obsolet {
-border: 1px solid #f48625;
--webkit-border-radius: 1%;
--moz-border-radius: 1%;
--o-border-radius: 1%;
-border-radius: 1%;
-background-color: #ffd27a;
-color:#191919;
-font-size:14px;
-margin:10px 0;
-padding: 10px;
-width:94%;
-display:block;
+	border: 1px solid #f48625;
+	-webkit-border-radius: 1%;
+	-moz-border-radius: 1%;
+	-o-border-radius: 1%;
+	border-radius: 1%;
+	background-color: #ffd27a;
+	color:#191919;
+	font-size:14px;
+	margin:10px 0;
+	padding: 10px;
+	width:94%;
+	display:block;
 }
 
 #desactualitzat a, #obsolet a {
-color: #C50F0B;
-font-size: 15px;
-font-weight: bold;
+	color: #C50F0B;
+	font-size: 15px;
+	font-weight: bold;
 }
 
 
@@ -576,77 +581,77 @@ font-weight: bold;
 
 /* images */
 div.floatright, table.floatright {
-        clear: right;
-        float: right;
-        position: relative;
-        margin: 0 0 .5em .5em;
-        border: 0;
-/*
-        border: .5em solid white;
-        border-width: .5em 0 .8em 1.4em;
-*/
+	clear: right;
+	float: right;
+	position: relative;
+	margin: 0 0 .5em .5em;
+	border: 0;
+	/*
+	border: .5em solid white;
+	border-width: .5em 0 .8em 1.4em;
+	*/
 }
 div.floatright p { font-style: italic; }
 div.floatleft, table.floatleft {
-        float: left;
-        clear: left;
-        position: relative;
-        margin: 0 .5em .5em 0;
-        border: 0;
-/*
-        margin: .3em .5em .5em 0;
-        border: .5em solid white;
-        border-width: .5em 1.4em .8em 0;
-*/
+	float: left;
+	clear: left;
+	position: relative;
+	margin: 0 .5em .5em 0;
+	border: 0;
+	/*
+	margin: .3em .5em .5em 0;
+	border: .5em solid white;
+	border-width: .5em 1.4em .8em 0;
+	*/
 }
 div.floatleft p { font-style: italic; }
 /* thumbnails */
 div.thumb {
-        margin-bottom: .5em;
-        border-style: solid;
-        border-color: white;
-        width: auto;
+	margin-bottom: .5em;
+	border-style: solid;
+	border-color: white;
+	width: auto;
 }
 
 div.thumbinner {
-        border: 1px solid #ccc;
-        padding: 3px !important;
-        background-color: #f9f9f9;
-        font-size: 94%;
-        text-align: center;
-        overflow: hidden;
+	border: 1px solid #ccc;
+	padding: 3px !important;
+	background-color: #f9f9f9;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
 }
 html .thumbimage {
-        border: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 html .thumbcaption {
-        border: none;
-        text-align: left;
-        line-height: 1.4em;
-        padding: 3px !important;
-        font-size: 94%;
+	border: none;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 3px !important;
+	font-size: 94%;
 }
 div.magnify {
-        float: right;
-        border: none !important;
-        background: none !important;
+	float: right;
+	border: none !important;
+	background: none !important;
 }
 div.magnify a, div.magnify img {
-        display: block;
-        border: none !important;
-        background: none !important;
+	display: block;
+	border: none !important;
+	background: none !important;
 }
 
 div.tright {
-        clear: right;
-        float: right;
-        border-width: .5em 0 .8em 1.4em;
+	clear: right;
+	float: right;
+	border-width: .5em 0 .8em 1.4em;
 }
 div.tleft {
-        float: left;
-        clear: left;
-        margin-right: .5em;
-        border-width: .5em 1.4em .8em 0;
+	float: left;
+	clear: left;
+	margin-right: .5em;
+	border-width: .5em 1.4em .8em 0;
 }
 img.thumbborder {
         border: 1px solid #dddddd;
@@ -654,22 +659,22 @@ img.thumbborder {
 
 /* filetoc */
 ul#filetoc {
-        text-align: center;
-        padding: 5px;
-        font-size: 95%;
-        margin-bottom: 0.5em;
-        margin-left: 0;
-        margin-right: 0;
+	text-align: center;
+	padding: 5px;
+	font-size: 95%;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 #filetoc li {
-        display: inline;
-        list-style-type: none;
-        padding-right: 2em;
+	display: inline;
+	list-style-type: none;
+	padding-right: 2em;
 }
 
 div.fullImageLink {
-clear:right;
+	clear:right;
 }
 
 /** Per a articles **/
@@ -677,37 +682,37 @@ clear:right;
 sub, sup { text-decoration: none; }
 
 .portadawiki{
-display:block;
-width:47.5%;
+	display:block;
+	width:47.5%;
 }
 
 .quasipercent{
-display:block;
-width:98%;
+	display:block;
+	width:98%;
 }
 
 .clearright{
-clear:right;
+	clear:right;
 }
 
 #footer #f-list, #footer #footer-info {
-margin-left:auto;
-margin-right:auto;
-list-style-image:none;
-list-style-position:outside;
-list-style-type:none;
+	margin-left:auto;
+	margin-right:auto;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
 }
 
 #footer #f-list li, #footer #footer-info li {
-display:inline;
-margin:0 10px 0 0;
-overflow:visible;
-padding:0;
-font-size:9px;
+	display:inline;
+	margin:0 10px 0 0;
+	overflow:visible;
+	padding:0;
+	font-size:9px;
 }
 
 #footer #f-list #copyright, #footer #footer-info #copyright {
-display:block;
+	display:block;
 }
 
 #footer #footer-places {
@@ -715,21 +720,20 @@ display:block;
 }
 
 
-.rebostfitxa h1.tit1{
-font-size:15px;
+.fitxa-rebostfitxa h1.tit1{
+	font-size:15px;
 }
 
-.rebostfitxa h1.tit2{
-font-size:20px;
-
+.fitxa-rebostfitxa h1.tit2{
+	font-size:20px;
 }
 
-.rebostfitxa h1.tit3{
-font-size:22px;
+.fitxa-rebostfitxa h1.tit3{
+	font-size:22px;
 }
 
-.rebostfitxa h1.tit4{
-font-size:25px;
+.fitxa-rebostfitxa h1.tit4{
+	font-size:25px;
 }
 
 
@@ -737,7 +741,6 @@ font-size:25px;
 pre {clear:both;}
 
 /** Clear redirecting in Rebost **/
-
 .rebostfitxa #contentSub {
 }
 
@@ -747,21 +750,21 @@ pre {clear:both;}
 
 /** Red links **/
 .body_white3 a.new {
-color:#CC2200;
+	color:#CC2200;
 }
 
 .body_white3 li a.new {
-color:#CC2200;
+	color:#CC2200;
 }
 
 a.external {
-background:transparent url(external.png) no-repeat scroll right center;
-padding:0px 12px 0px 0px;
+	background:transparent url(external.png) no-repeat scroll right center;
+	padding:0px 12px 0px 0px;
 }
 
 .menucentral a.external, #fitxarebost a.external, .impriwiki a.external {
-background:none;
-padding:0px 0px 0px 0px;
+	background:none;
+	padding:0px 0px 0px 0px;
 }
 
 /** Fix search and prefs **/
@@ -769,11 +772,3 @@ padding:0px 0px 0px 0px;
 .mw-search-formheader div.search-types ul li {width: auto !important;}
 table#mw-search-top-table {clear:both !important;}
 .mw-search-formheader div.results-info {float:none;}
-
-/** Fitxa Rebost **/
-
-.logofitxa {
-	float: left;
-	margin-right: 1em;
-}
-

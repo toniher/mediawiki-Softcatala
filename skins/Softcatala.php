@@ -170,7 +170,9 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$alltitle = $this->getThemeContext('alltitle');
 		$titleshow = $this->getThemeContext('title');
 		
-		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$this->assignClass( $ns, $alltitle ).'">';
+		$fitxa = $this->assignClass( $ns, $alltitle );
+		
+		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$fitxa.'">';
 		
 ?>
 
@@ -216,7 +218,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
 			<!-- /sitenotice -->
 			<?php endif; ?>
-			<?php $this->renderGridFull() ?>
+			<?php $this->renderGridFull( $fitxa, $titleshow ) ?>
 		</div>
 		
 		<!-- bodyContent -->
@@ -327,57 +329,10 @@ class SoftcatalaTemplate extends BaseTemplate {
 		return $fitxa;
 	}
 	
-	private function renderGridFull( ) {
+	private function renderGridFull( $fitxa, $titleshow ) {
 		
-		$ns = $this->getThemeContext('ns');
-		$alltitle = $this->getThemeContext('alltitle');
-		$titleshow = $this->getThemeContext('title');
 		
-		$fitxa = "";
-		
-		if ($ns == NS_REBOST) {
-			$fitxa = "rebostfitxa";
-		} elseif ( $ns == NS_CATEGORY && preg_match("/Rebost/", $alltitle) ) {
-			$fitxa = "rebostwiki";
-		} else {
-			$fitxa = "projectespage";
-		}
-		
-		//if ((preg_match("/^Rebost/", $wgTitle)) or (preg_match("/^Categoria\:/", $wgTitle))) {
-		//	
-		//	$rebost = "rebostwiki";
-		//}
-		//
-		if (preg_match("/^Projectes/", $alltitle)) { 
-			$fitxa = "boxprojectes projectespage";
-		}
-		// 
-		//if (preg_match("/^Linux\/.*$/", $wgTitle)) {
-		//
-		//	 $rebost = "projectespage";
-		//	 $linux = 1;
-		//}
-		//
-		//if (preg_match("/^Guia\sd\'estil\/.*$/", $wgTitle)) {
-		//
-		//	 $rebost = "projectespage";
-		//	 $guia = 1;
-		//}
-		//
-		//if (preg_match("/^Projectes\s*$/", $wgTitle)) {
-		//
-		//	 $rebost = "projecteswiki";
-		//}
-		//
-		//if ((preg_match("/^Rebost/", $wgTitle))) {
-		//	
-		//	$rebost = "rebostfitxa";
-		//	$impriwiki = "impriwikifitxa";
-		//}
-		//	
-		//
-		
-		echo '<div class="'.$fitxa.'">';
+		echo '<div class="fitxa-'.$fitxa.'">';
 		
 		if ($fitxa == 'rebostfitxa') {
 			// Placeholder temporal logo
@@ -504,14 +459,14 @@ class SoftcatalaTemplate extends BaseTemplate {
 	private function renderPersonal( $urls ) {
 				
 		$string = "";
-                foreach($urls as $key => $item) {
-                        $string.="<p id=\"pt-".Sanitizer::escapeId($key)."\"";
+		foreach($urls as $key => $item) {
+			$string.="<p id=\"pt-".Sanitizer::escapeId($key)."\"";
 			if ($item['active']) { $string.=" class=\"active\""; }
 			$string.=">";
 			$string.="<a href=\"".htmlspecialchars($item['href'])."\">";
 			$string.=htmlspecialchars($item['text']);
 			$string.="</a></p>";
-                }
+		}
 		
 		return($string);
 		
@@ -783,11 +738,11 @@ class SoftcatalaTemplate extends BaseTemplate {
 			return $HMainpage;
 		}
 		if ($ask == 'ns') {
-                        return $HNS;
-                }
+			return $HNS;
+		}
 		if ($ask == 'groups') {
-                        return $HUGroups;
-                }
+		return $HUGroups;
+		}
 		if ($ask == 'action') {
 			return $HAction;
 		}
@@ -801,12 +756,12 @@ class SoftcatalaTemplate extends BaseTemplate {
 			return $HUsername;
 		}
 		if ($ask == 'newformpage') {
-                        return $HNewFormPage;
-                }
+			return $HNewFormPage;
+		}
 
 		if ($ask == 'categoria') {
 			return $_REQUEST["categoria"];
-                }
+		}
 		
 		if ($ask == 'editpage') {
 			
