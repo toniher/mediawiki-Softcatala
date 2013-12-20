@@ -322,6 +322,10 @@ margin-bottom: 8px;
 }
 
 /** Categories **/
+#catlinks {
+	text-align:right;
+}
+
 #catlinks, #rebost_categories {
 
 	font-family:Verdana, Arial, Helvetica, sans-serif;
@@ -338,6 +342,10 @@ margin-bottom: 8px;
 #catlinks a:hover,
 #rebost_categories a:hover{
 	text-decoration: underline;
+}
+
+rebostwiki #catlinks, .rebostfitxa #catlinks {
+	display: none;
 }
 
 /**No en rebost**/
@@ -765,7 +773,7 @@ table#mw-search-top-table {clear:both !important;}
 /** Fitxa Rebost **/
 
 .logofitxa {
-    float: left;
-    margin-right: 1em;
+	float: left;
+	margin-right: 1em;
 }
 

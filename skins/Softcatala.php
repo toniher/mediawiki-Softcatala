@@ -164,119 +164,124 @@ class SoftcatalaTemplate extends BaseTemplate {
 		}
 		// Output HTML Page
 		$this->html( 'headelement' );
+
+		// Data for assigning classes
+		$ns = $this->getThemeContext('ns');
+		$alltitle = $this->getThemeContext('alltitle');
+		$titleshow = $this->getThemeContext('title');
+		
+		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$this->assignClass( $ns, $alltitle ).'">';
+		
 ?>
-<div id="wrapper" class="thrColHybHdr fondo2">
+
 	<div id="container">
 	<?php echo $this->renderPubli() ?>
 	<?php echo $this->renderBoxHeader() ?>
 		
-		<!-- Sidebar -->
-		<div id="sidebar1">
-			<div id="wiki_int">
-			<h1>Wiki de Softcatalà  <span class="blanco"> <a href="/wiki/Wiki de Softcatalà">Què és?</a></span></h1>
-			
-			
-			<div id="personal-links">
-				<?php echo $this->renderPersonal( $this->data['personal_urls'] ); ?>
-			</div>
-			<div class="menuwiki"> <?php $this->renderPortals( $this->data['sidebar'] ); ?></div>
-			</div>
-			<div class="boxgoogle_publi">
-				<div class="boxpubli">PUBLICITAT</div>
-			</div>
-			<div class="img_sidebar">
-			  <a href="/wiki/Projectes/Rebost/Instruccions#Incorporaci.C3.B3_de_nous_programes_a_El_Rebost"><img class="bzero" longdesc="#" alt="Afegeix un programa" src="/img/banner_afegir.jpg"></a>
-			</div>
-		</div>
-		<!-- Sidebar end -->
+	<!-- Sidebar -->
+	<div id="sidebar1">
+		<div id="wiki_int">
+		<h1>Wiki de Softcatalà  <span class="blanco"> <a href="/wiki/Wiki de Softcatalà">Què és?</a></span></h1>
 		
-		<!-- content -->
-		<div id="mainContent" class="mw-body">
-			<!-- header -->
-			<div id="mw-head" class="noprint">
-				<div id="right-navigation">
-					<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS' ) ); ?>
-				</div>
-			</div>
-			<!-- /header -->
-			
-			
-			
-			
-			<div class="gridfull">
-				<a id="top"></a>
-				<div id="mw-js-message" style="display:none;"<?php $this->html( 'userlangattributes' ) ?>></div>
-				<?php if ( $this->data['sitenotice'] ): ?>
-				<!-- sitenotice -->
-				<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
-				<!-- /sitenotice -->
-				<?php endif; ?>
-				<?php $this->renderGridFull() ?>
-			</div>
-			
-			<!-- bodyContent -->
-			<div id="bodyContent" class="boxwhite3">
-				
-				<div class="body_white3">
-					
-					<?php if ( $this->data['isarticle'] ): ?>
-					<!-- tagline -->
-					<!-- <div id="siteSub"><?php $this->msg( 'tagline' ) ?></div> -->
-					<!-- /tagline -->
-					<?php endif; ?>
-					<?php if ( $this->data['undelete'] ): ?>
-					<!-- undelete -->
-					<div id="contentSub2"><?php $this->html( 'undelete' ) ?></div>
-					<!-- /undelete -->
-					<?php endif; ?>
-					<?php if( $this->data['newtalk'] ): ?>
-					<!-- newtalk -->
-					<div class="usermessage"><?php $this->html( 'newtalk' )  ?></div>
-					<!-- /newtalk -->
-					<?php endif; ?>
-					<?php if ( $this->data['showjumplinks'] ): ?>
-					<!-- jumpto -->
-					<div id="jump-to-nav" class="mw-jump">
-						<?php $this->msg( 'jumpto' ) ?>
-						<a href="#mw-head"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
-						<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
-					</div>
-					<!-- /jumpto -->
-					<?php endif; ?>
-					<!-- bodycontent -->
-					<?php $this->html( 'bodycontent' ) ?>
-					<!-- /bodycontent -->
-					<?php if ( $this->data['printfooter'] ): ?>
-					<!-- printfooter -->
-					<div class="printfooter">
-					<?php $this->html( 'printfooter' ); ?>
-					</div>
-					<!-- /printfooter -->
-					<?php endif; ?>
-					
-				</div>
-	
-				<?php if ( $this->data['catlinks'] ): ?>
-				<!-- catlinks -->
-				<div class="lindot">
-					<img src="/img/shim.gif" alt="Separa Categories" longdesc="Separa Categories">
-				</div>
-				<?php $this->html( 'catlinks' ); ?>
-				<!-- /catlinks -->
-				<?php endif; ?>
-				<?php if ( $this->data['dataAfterContent'] ): ?>
-				<!-- dataAfterContent -->
-				<?php $this->html( 'dataAfterContent' ); ?>
-				<!-- /dataAfterContent -->
-				<?php endif; ?>
-				<div class="visualClear"></div>
-				<!-- debughtml -->
-				<?php $this->html( 'debughtml' ); ?>
-				<!-- /debughtml -->
-			</div>
-			<!-- /bodyContent -->
+		
+		<div id="personal-links">
+			<?php echo $this->renderPersonal( $this->data['personal_urls'] ); ?>
 		</div>
-		<!-- /content -->
+		<div class="menuwiki"> <?php $this->renderPortals( $this->data['sidebar'] ); ?></div>
+		</div>
+		<div class="boxgoogle_publi">
+			<div class="boxpubli">PUBLICITAT</div>
+		</div>
+		<div class="img_sidebar">
+		  <a href="/wiki/Projectes/Rebost/Instruccions#Incorporaci.C3.B3_de_nous_programes_a_El_Rebost"><img class="bzero" longdesc="#" alt="Afegeix un programa" src="/img/banner_afegir.jpg"></a>
+		</div>
+	</div>
+	<!-- Sidebar end -->
+	
+	<!-- content -->
+	<div id="mainContent" class="mw-body">
+		<!-- header -->
+		<div id="mw-head" class="noprint">
+			<div id="right-navigation">
+				<?php $this->renderNavigation( array( 'VIEWS', 'ACTIONS' ) ); ?>
+			</div>
+		</div>
+		<!-- /header -->
+
+		<div class="gridfull">
+			<a id="top"></a>
+			<div id="mw-js-message" style="display:none;"<?php $this->html( 'userlangattributes' ) ?>></div>
+			<?php if ( $this->data['sitenotice'] ): ?>
+			<!-- sitenotice -->
+			<div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div>
+			<!-- /sitenotice -->
+			<?php endif; ?>
+			<?php $this->renderGridFull() ?>
+		</div>
+		
+		<!-- bodyContent -->
+		<div id="bodyContent" class="boxwhite3">
+			
+			<div class="body_white3">
+				
+				<?php if ( $this->data['isarticle'] ): ?>
+				<!-- tagline -->
+				<!-- <div id="siteSub"><?php $this->msg( 'tagline' ) ?></div> -->
+				<!-- /tagline -->
+				<?php endif; ?>
+				<?php if ( $this->data['undelete'] ): ?>
+				<!-- undelete -->
+				<div id="contentSub2"><?php $this->html( 'undelete' ) ?></div>
+				<!-- /undelete -->
+				<?php endif; ?>
+				<?php if( $this->data['newtalk'] ): ?>
+				<!-- newtalk -->
+				<div class="usermessage"><?php $this->html( 'newtalk' )  ?></div>
+				<!-- /newtalk -->
+				<?php endif; ?>
+				<?php if ( $this->data['showjumplinks'] ): ?>
+				<!-- jumpto -->
+				<div id="jump-to-nav" class="mw-jump">
+					<?php $this->msg( 'jumpto' ) ?>
+					<a href="#mw-head"><?php $this->msg( 'jumptonavigation' ) ?></a><?php $this->msg( 'comma-separator' ) ?>
+					<a href="#p-search"><?php $this->msg( 'jumptosearch' ) ?></a>
+				</div>
+				<!-- /jumpto -->
+				<?php endif; ?>
+				<!-- bodycontent -->
+				<?php $this->html( 'bodycontent' ) ?>
+				<!-- /bodycontent -->
+				<?php if ( $this->data['printfooter'] ): ?>
+				<!-- printfooter -->
+				<div class="printfooter">
+				<?php $this->html( 'printfooter' ); ?>
+				</div>
+				<!-- /printfooter -->
+				<?php endif; ?>
+				
+			</div>
+
+			<?php if ( $this->data['catlinks'] ): ?>
+			<!-- catlinks -->
+			<div class="lindot">
+				<img src="/img/shim.gif" alt="Separa Categories" longdesc="Separa Categories">
+			</div>
+			<?php $this->html( 'catlinks' ); ?>
+			<!-- /catlinks -->
+			<?php endif; ?>
+			<?php if ( $this->data['dataAfterContent'] ): ?>
+			<!-- dataAfterContent -->
+			<?php $this->html( 'dataAfterContent' ); ?>
+			<!-- /dataAfterContent -->
+			<?php endif; ?>
+			<div class="visualClear"></div>
+			<!-- debughtml -->
+			<?php $this->html( 'debughtml' ); ?>
+			<!-- /debughtml -->
+		</div>
+		<!-- /bodyContent -->
+	</div>
+	<!-- /content -->
 
 
 	</div>
@@ -303,6 +308,23 @@ class SoftcatalaTemplate extends BaseTemplate {
 	</body>
 </html>
 <?php
+	}
+	
+	private function assignClass ( $ns, $alltitle ) {
+		
+		if ($ns == NS_REBOST) {
+			$fitxa = "rebostfitxa";
+		} elseif ( $ns == NS_CATEGORY && preg_match("/Rebost/", $alltitle) ) {
+			$fitxa = "rebostwiki";
+		} else {
+			$fitxa = "projectespage";
+		}
+
+		if (preg_match("/^Projectes/", $alltitle)) { 
+			$fitxa = "boxprojectes projectespage";
+		}
+		
+		return $fitxa;
 	}
 	
 	private function renderGridFull( ) {
@@ -366,7 +388,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		<!-- firstHeading -->
 		<h1 id="firstHeading" class="firstHeading"><span dir="auto">';
 		
-		if ( $fitxa == 'rebostfitxa' && $fitxa == 'rebostwiki' ) {
+		if ( $fitxa == 'rebostfitxa' || $fitxa == 'rebostwiki' ) {
 			echo $titleshow;
 		} else {
 			$this->html('title');
