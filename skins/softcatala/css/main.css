@@ -457,10 +457,10 @@ fieldset.nested {
 
 
 /** Projectes **/
-.fitxa-projectes{width:99.5%;height:90px;float:left;background-image:url(/img/fonsprojectes.jpg);background-repeat:repeat-x;}
+.gridfull .fitxa-projectes{width:99.5%;height:90px;float:left;background-image:url(/img/fonsprojectes.jpg);background-repeat:repeat-x;}
 
 
-.fitxa-projectes h1{color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:30px;margin-left:15px;margin-top:10px;}
+.gridfull .fitxa-projectes h1{color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:30px;margin-left:15px;margin-top:10px;}
 
 
 .body_white3 .colder .topdescarrega h1 {
