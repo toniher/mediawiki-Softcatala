@@ -319,7 +319,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $alltitle ) ) {
 			$fitxa = "rebostwiki";
 		} else {
-			$fitxa = "wiki";
+			$fitxa = "paginasimple";
 		}
 
 		if ( preg_match("/^Projectes/", $alltitle) ) { 
