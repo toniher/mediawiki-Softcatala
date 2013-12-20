@@ -309,13 +309,13 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 		$ns = $this->getThemeContext('ns');
 		$alltitle = $this->getThemeContext('alltitle');
-
+		$titleshow = $this->getThemeContext('title');
 		
 		$fitxa = "";
 		
 		if ($ns == NS_REBOST) {
 			$fitxa = "rebostfitxa";
-		} elseif ( $ns == NS_CATEGORY ) {
+		} elseif ( $ns == NS_CATEGORY && preg_match("/Rebost/", $alltitle) ) {
 			$fitxa = "rebostwiki";
 		} else {
 			$fitxa = "projectespage";
@@ -366,7 +366,11 @@ class SoftcatalaTemplate extends BaseTemplate {
 		<!-- firstHeading -->
 		<h1 id="firstHeading" class="firstHeading"><span dir="auto">';
 		
-		$this->html('title');
+		if ( $fitxa == 'rebostfitxa' && $fitxa == 'rebostwiki' ) {
+			echo $titleshow;
+		} else {
+			$this->html('title');
+		}
 		
 		echo '</span></h1>
 		<!-- /firstHeading -->
