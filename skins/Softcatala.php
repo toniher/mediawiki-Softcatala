@@ -170,7 +170,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$alltitle = $this->getThemeContext('alltitle');
 		$titleshow = $this->getThemeContext('title');
 		
-		$fitxa = $this->assignClass( $ns, $alltitle );
+		$fitxa = $this->assignClass( $ns, $alltitle, $showtitle );
 		
 		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$fitxa.'">';
 		
@@ -312,11 +312,11 @@ class SoftcatalaTemplate extends BaseTemplate {
 <?php
 	}
 	
-	private function assignClass ( $ns, $alltitle ) {
+	private function assignClass ( $ns, $alltitle, $showtitle ) {
 		
 		if ( $ns == NS_REBOST)  {
 			$fitxa = "rebostfitxa";
-		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $alltitle ) ) {
+		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $showtitle ) ) {
 			$fitxa = "rebostwiki";
 		} else {
 			$fitxa = "paginasimple";
@@ -712,7 +712,6 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$HULogged = $wgUser->isLoggedIn();
 		$HUsername = $wgUser->getName();
 
-					
 		if (in_array('sysop', $HUGroups)) {
 			$HUSysop = true;
 		}
@@ -726,7 +725,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 
 		if ($thTitle->isMainPage()) {$HMainpage = true;}
 
-		if ($ask == 'title') {			
+		if ($ask == 'title') {
 			return $HTitle;
 		}
 		
