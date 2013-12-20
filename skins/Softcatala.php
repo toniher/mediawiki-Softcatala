@@ -170,7 +170,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		$alltitle = $this->getThemeContext('alltitle');
 		$titleshow = $this->getThemeContext('title');
 		
-		$fitxa = $this->assignClass( $ns, $alltitle, $showtitle );
+		$fitxa = $this->assignClass( $ns, $alltitle, $titleshow );
 		
 		echo '<div id="wrapper" class="thrColHybHdr fondo2 '.$fitxa.'">';
 		
@@ -312,11 +312,11 @@ class SoftcatalaTemplate extends BaseTemplate {
 <?php
 	}
 	
-	private function assignClass ( $ns, $alltitle, $showtitle ) {
+	private function assignClass ( $ns, $alltitle, $titleshow ) {
 		
 		if ( $ns == NS_REBOST)  {
 			$fitxa = "rebostfitxa";
-		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $showtitle ) ) {
+		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $titleshow ) ) {
 			$fitxa = "rebostwiki";
 		} else {
 			$fitxa = "paginasimple";
