@@ -471,14 +471,6 @@ label{display:none;}
 .titu{width:200px;float:left;position:relative;top:25px;font-family:Arial, Helvetica, sans-serif;font-size:20px;color:#000000;text-align:left;padding:0;margin:0;}
 
 
-.boxprojectes{width:99.5%;height:90px;float:left;background-image:url(/img/fonsprojectes.jpg);background-repeat:repeat-x;}
-
-
-.boxprojectes h1{color:#ffffff;font-family:Arial, Helvetica, sans-serif;font-size:30px;margin-left:15px;margin-top:10px;}
-
-
-
-
 .ruta2{font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px;font-weight:bold;color:#D1CFC1;position:relative;left:15px;top:10px;}
 .ruta2 a{color:#D1CFC1;text-decoration:none;}
 .ruta2 a:hover{color:#D1CFC1;text-decoration:underline;}

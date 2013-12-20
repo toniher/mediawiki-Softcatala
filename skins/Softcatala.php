@@ -314,16 +314,16 @@ class SoftcatalaTemplate extends BaseTemplate {
 	
 	private function assignClass ( $ns, $alltitle ) {
 		
-		if ($ns == NS_REBOST) {
+		if ( $ns == NS_REBOST)  {
 			$fitxa = "rebostfitxa";
-		} elseif ( $ns == NS_CATEGORY && preg_match("/Rebost/", $alltitle) ) {
+		} elseif ( $ns == NS_CATEGORY && preg_match( "/^Rebost/", $alltitle ) ) {
 			$fitxa = "rebostwiki";
 		} else {
 			$fitxa = "projectespage";
 		}
 
-		if (preg_match("/^Projectes/", $alltitle)) { 
-			$fitxa = "boxprojectes projectespage";
+		if ( preg_match("/^Projectes/", $alltitle) ) { 
+			$fitxa = "projectespage";
 		}
 		
 		return $fitxa;
