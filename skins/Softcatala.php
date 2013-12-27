@@ -617,7 +617,7 @@ OA_show(17);
 				?></a></span></li>
 		<?php endforeach;
 		// Adding talk in view
-		if ( $hasltak ) {
+		if ( $hastalk ) {
 			if ( $talk ) {
 				echo "<li><a href='".$talklink."'>".wfMessage( 'Articlepage' )->text()."</a></li>";
 			} else {
