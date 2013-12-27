@@ -618,9 +618,9 @@ OA_show(17);
 		// Adding talk in view
 		
 		if ( $talk ) {
-			echo "PAGE ".$talklink;
+			echo "<li><a href='".$talklink."'>".wfMessage( 'Articlepage' )->text()."</a></li>";
 		} else {
-			echo "TALK ".$talklink;
+			echo "<li><a href='".$talklink."'>".wfMessage( 'Talkpage' )->text()."</a></li>";
 		}
 		
 		?>
@@ -740,7 +740,9 @@ OA_show(17);
 		if ( $HTalk ) {
 			$HTalkLink = $thTitle->getSubjectPage()->getLocalURL();
 		} else {
-			$HTalkLink = $thTitle->getTalkPage()->getLocalURL();
+			if ( $thTitle->canTalk() ) { 
+				$HTalkLink = $thTitle->getTalkPage()->getLocalURL();
+			}
 		}
 
 		if ( $ask == 'title' ) {
