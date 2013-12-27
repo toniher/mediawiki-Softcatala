@@ -356,18 +356,33 @@ class SoftcatalaTemplate extends BaseTemplate {
 		
 	}
 	
-	private function renderPubli( ) {
+	private function renderPubli( $fitxa ) {
+		
+		$publistr = '<script type="text/javascript"><!--// <![CDATA[
+    /* [id14] Softcatalà - Wiki Publisuperior esquerra */
+    OA_show(14);
+// ]]> --></script><noscript><a target="_blank" href="http://ad.softcatala.org/www/delivery/ck.php?n=d7f8765"><img border="0" alt="" src="http://ad.softcatala.org/www/delivery/avw.php?zoneid=14&amp;n=d7f8765" /></a></noscript>';
+		
+		if ( $fitxa == 'rebostwiki' || $fitxa == 'rebostfitxa' ) {
+			$publistr = '<script type="text/javascript"><!--// <![CDATA[
+    /* [id15] Softcatalà - Rebost Publisuperior esquerra */
+    OA_show(15);
+// ]]> --></script><noscript><a target="_blank" href="http://ad.softcatala.org/www/delivery/ck.php?n=cd0379e"><img border="0" alt="" src="http://ad.softcatala.org/www/delivery/avw.php?zoneid=15&amp;n=cd0379e" /></a></noscript>';
+		}
 		
 		$string = '<div id="publisuperior">
 <div id="publisuperior1">
 <div class="publieti"><img title="Publicitat" alt="Publicitat" src="/img/publicitat.jpg"></div>
-<div class="publicos">
+<div class="publicos">'.$publistr.'
 </div>
 </div>
 <div id="publisuperior2">
 <div class="publieti"><img title="Publicitat" alt="Publicitat" src="/img/publicitat.jpg"></div>
 <div class="publicos">
-
+<script type="text/javascript"><!--// <![CDATA[
+/* [id17] Softcatalà - Genèric Publisuperior dreta */
+OA_show(17);
+// ]]> --></script><noscript><a target="_blank" href="http://ad.softcatala.org/www/delivery/ck.php?n=b548d5e"><img border="0" alt="" src="http://ad.softcatala.org/www/delivery/avw.php?zoneid=17&amp;n=b548d5e" /></a></noscript>
 </div>
 </div>
 </div>';
