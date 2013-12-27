@@ -178,7 +178,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 ?>
 
 	<div id="container">
-	<?php echo $this->renderPubli() ?>
+	<?php echo $this->renderPubli( $fitxa ) ?>
 	<?php echo $this->renderBoxHeader() ?>
 		
 	<!-- Sidebar -->
@@ -194,6 +194,10 @@ class SoftcatalaTemplate extends BaseTemplate {
 		</div>
 		<div class="boxgoogle_publi">
 			<div class="boxpubli">PUBLICITAT</div>
+			<script type='text/javascript'><!--// <![CDATA[
+			/* [id4] Softcatalà - Wiki requadre */
+			OA_show(4);
+			// ]]> --></script><noscript><a target='_blank' href='http://ad.softcatala.org/www/delivery/ck.php?n=801f44b'><img border='0' alt='' src='http://ad.softcatala.org/www/delivery/avw.php?zoneid=4&amp;n=801f44b' /></a></noscript>
 		</div>
 		<div class="img_sidebar">
 		  <a href="/wiki/Projectes/Rebost/Instruccions#Incorporaci.C3.B3_de_nous_programes_a_El_Rebost"><img class="bzero" longdesc="#" alt="Afegeix un programa" src="/img/banner_afegir.jpg"></a>
@@ -414,25 +418,20 @@ class SoftcatalaTemplate extends BaseTemplate {
 </div>
 <div class="boxcerca">
 
-<form target="_top" action="/wiki/Wiki_de_Softcatal%C3%A0:Cerca?domains=softcatala.org&amp;sitesearch=softcatala.org&amp;client=pub-5137971297629213&amp;forid=1&amp;ie=UTF-8&amp;oe=UTF-8&amp;safe=active&amp;cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A11&amp;hl=ca" name="cercaform" method="get">
+<form method="get" name="cercaform" action="/wiki/Especial:Cerca" target="_top">
 
 <label for="cer">cerca</label>
 <span class="cerca">Cerca</span>
-<select onchange="selectform(this.value);" id="cer" class="i1" name="cerca1">
-<option value="0" selected="selected">Tot Softcatalà</option>
-<option value="1">Wiki de Softcatalà</option>
-<option value="2">Fòrums de Softcatalà</option>
+<select name="cerca1" class="i1" id="cer" onchange="selectform(this.value);">
+<option value="0">Notícies</option>
+<option value="1">Wiki</option>
+<option value="2">Fòrums</option>
+<option  selected="selected" value="3">Rebost</option>
 </select>
 <label for="es">escriviu-hi la vostra cerca</label>
-<input type="text" onfocus="cleartext(this)" value="El vostre terme de cerca" id="es" class="i2" name="q">
-<input type="hidden" value="softcatala.org" name="sitesearch" id="sgoogle1">
-<input type="hidden" value="pub-5137971297629213" name="client" id="sgoogle2">
-<input type="hidden" value="1" name="forid" id="sgoogle3">
-<input type="hidden" value="UTF-8" name="ie" id="sgoogle4">
-<input type="hidden" value="UTF-8" name="oe" id="sgoogle5">
-<input type="hidden" value="active" name="safe" id="sgoogle6">
-<input type="hidden" value="GALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBGC:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:11" name="cof" id="sgoogle7">
-<input type="hidden" value="ca" name="hl" id="sgoogle8">
+<input name="search" type="text" class="i2" id="es"  value="El vostre terme de cerca" onfocus="cleartext(this)"/>
+<input type="hidden" name="fulltext" value="yes" id="fulltextsearch" />
+<input name="ns100" id="ns100search" type="hidden" value="1" />
 <!--
 <input type="submit" value="Cerca-ho" />
 <div class="botcercar"><a href="#">Cerca-ho</a></div> -->
