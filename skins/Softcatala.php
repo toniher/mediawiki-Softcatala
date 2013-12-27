@@ -43,9 +43,13 @@ class SkinSoftcatala extends SkinTemplate {
 				htmlspecialchars( $wgLocalStylePath ) .
 				"/{$this->stylename}/csshover{$min}.htc\")}</style><![endif]-->"
 		);
+		// We add extra elements until a better way
+		$out->addHeadItem( 'publicitat', '<script type="text/javascript" src="http://ad.softcatala.org/www/delivery/spcjs.php?id=1"></script>');
+		$out->addHeadItem( 'logo', '<link rel="image_src" href="http://www.softcatala.org/imatges/noticies/softcatala.png" />');
+		$out->addHeadItem( 'logometa', '<meta property="og:image" content="http://www.softcatala.org/imatges/noticies/softcatala.png" />');
 	}
 
-		/**
+	/**
 	 * Load skin and user CSS files in the correct order
 	 * fixes bug 22916
 	 * @param $out OutputPage object
@@ -56,33 +60,6 @@ class SkinSoftcatala extends SkinTemplate {
 
 		$out->addModuleStyles( 'skins.softcatala' );
 	}
-//	/** Using Softcatala style. */
-//	function initPage( &$out ) {
-//		SkinTemplate::initPage( $out );
-//		$this->skinname  = 'softcatala';
-//		$this->stylename = 'softcatala';
-//		$this->template  = 'SoftcatalaTemplate';
-//	}
-//
-//        function setupSkinUserCss( OutputPage $out ) {
-//                global $wgHandheldStyle;
-//
-//                parent::setupSkinUserCss( $out );
-//
-//                // Append to the default screen common & print styles...
-//                $out->addStyle( 'softcatala/main.css', 'screen' );
-//                if( $wgHandheldStyle ) {
-//                        // Currently in testing... try 'chick/main.css'
-//                        $out->addStyle( $wgHandheldStyle, 'handheld' );
-//                }
-//
-//                $out->addStyle( 'softcatala/IE50Fixes.css', 'screen', 'lt IE 5.5000' );
-//                $out->addStyle( 'softcatala/IE55Fixes.css', 'screen', 'IE 5.5000' );
-//                $out->addStyle( 'softcatala/IE60Fixes.css', 'screen', 'IE 6' );
-//                $out->addStyle( 'softcatala/IE70Fixes.css', 'screen', 'IE 7' );
-//
-//                $out->addStyle( 'softcatala/rtl.css', 'screen', '', 'rtl' );
-//        }
 
 }
 
