@@ -202,11 +202,32 @@ function canviafons (llista, sistema) {
 	}
 }
 
-/** Move icon **/
-$(document).on( "ready", function() { 
+/** Functions to load **/
+
+$(document).ready( function() { 
+
+	/** Move icon **/
 	$(".logofitxa").empty();
 	var logofitxa = $("#logofitxa").children().html();
 	$(".logofitxa").html(logofitxa);
 	$("#logofitxa").remove();
+
+	/** DetectSO **/
+	detectaso();
+
+	/** Hide in rebostwiki **/
+   	var sysop = 0;
+	$.each(wgUserGroups, function(i, val) {
+		if ( val == 'sysop' ) {
+			sysop = 1;
+		}
+	});
+
+	if ( sysop === 0 ) {
+		$(".rebostwiki #mw-subcategories").hide();
+		$(".rebostwiki #mw-pages").hide();
+		$(".rebostwiki #mw-category-media").hide();
+	}
+
 });
 
