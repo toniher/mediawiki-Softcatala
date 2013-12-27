@@ -556,7 +556,7 @@ OA_show(17);
 
 		$talk = $this->getThemeContext('talk');
 		$talklink = $this->getThemeContext('talklink');
-		$hastalk = $this->getThemeContext('hastalk');
+		$ns = $this->getThemeContext('ns');
 		
 		// If only one element was given, wrap it in an array, allowing more
 		// flexible arguments
@@ -616,8 +616,8 @@ OA_show(17);
 				}
 				?></a></span></li>
 		<?php endforeach;
-		// Adding talk in view
-		if ( $hastalk ) {
+		// Adding talk in view, avoiding special pages
+		if ( $ns >= 0 ) {
 			if ( $talk ) {
 				echo "<li><a href='".$talklink."'>".wfMessage( 'Articlepage' )->text()."</a></li>";
 			} else {
@@ -709,7 +709,6 @@ OA_show(17);
 		$HEditPage = false;
 		$HForm = false;
 		$HTalk = false;
-		$HHasTalk = false;
 		
 		$thTitle = $this->getSkin()->getTitle();
 		
@@ -739,12 +738,11 @@ OA_show(17);
 		
 		$HTalkLink = "";
 		$HTalk = $thTitle->isTalkPage();
-		$HHasTalk = $thTitle->canTalk();
 		
 		if ( $HTalk ) {
 			$HTalkLink = $thTitle->getSubjectPage()->getLocalURL();
 		} else {
-			if ( $HHasTalk ) { 
+			if ( $thTitle->canTalk() ) { 
 				$HTalkLink = $thTitle->getTalkPage()->getLocalURL();
 			}
 		}
