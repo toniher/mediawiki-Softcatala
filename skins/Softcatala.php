@@ -554,6 +554,9 @@ OA_show(17);
 	protected function renderNavigation( $elements ) {
 		global $wgVectorUseSimpleSearch;
 
+		$talk = $this->getThemeContext('talk');
+		$talklink = $this->getThemeContext('talklink');
+
 		// If only one element was given, wrap it in an array, allowing more
 		// flexible arguments
 		if ( !is_array( $elements ) ) {
@@ -611,7 +614,16 @@ OA_show(17);
 					echo array_key_exists( 'img', $link ) ?  '<img src="' . $link['img'] . '" alt="' . $link['text'] . '" />' : htmlspecialchars( $link['text'] );
 				}
 				?></a></span></li>
-		<?php endforeach; ?>
+		<?php endforeach;
+		// Adding talk in view
+		
+		if ( $talk ) {
+			echo "PAGE ".$talklink;
+		} else {
+			echo "TALK ".$talklink;
+		}
+		
+		?>
 	</ul>
 </div>
 <?php
@@ -695,6 +707,7 @@ OA_show(17);
 		$HNewFormPage = false;
 		$HEditPage = false;
 		$HForm = false;
+		$HTalk = false;
 		
 		$thTitle = $this->getSkin()->getTitle();
 		
@@ -718,10 +731,17 @@ OA_show(17);
 			$HNewFormPage = true;
 		}
 
-
 		$HAction = $wgRequest->getText('action');
 
 		if ( $thTitle->isMainPage() ) { $HMainpage = true; }
+		
+		$HTalkLink = "";
+		$HTalk = $thTitle->isTalkPage();
+		if ( $HTalk ) {
+			$HTalkLink = $thTitle->getSubjectPage()->getLocalURL();
+		} else {
+			$HTalkLink = $thTitle->getTalkPage()->getLocalURL();
+		}
 
 		if ( $ask == 'title' ) {
 			return $HTitle;
@@ -742,7 +762,7 @@ OA_show(17);
 			return $HNS;
 		}
 		if ($ask == 'groups') {
-		return $HUGroups;
+			return $HUGroups;
 		}
 		if ($ask == 'action') {
 			return $HAction;
@@ -774,6 +794,12 @@ OA_show(17);
 			return $HEditPage;
 		}
 		
+		if ( $ask == 'talk' ) {
+			return $HTalk;
+		}
+		if ( $ask == 'talklink' ) {
+			return $HTalkLink;
+		}
 		
 		else { return ''; }
 	}
