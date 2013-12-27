@@ -893,11 +893,13 @@ clear:both;
 #publisuperior1{
 float:left;
 width: 744px;
+height: 95px;
 }
 #publisuperior2{
 float:right;
 width:252px;
 margin-right:10px;
+height: 95px;
 }
 .publieti {
 float:left;
