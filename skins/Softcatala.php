@@ -362,8 +362,8 @@ class SoftcatalaTemplate extends BaseTemplate {
     /* [id14] Softcatalà - Wiki Publisuperior esquerra */
     OA_show(14);
 // ]]> --></script><noscript><a target="_blank" href="http://ad.softcatala.org/www/delivery/ck.php?n=d7f8765"><img border="0" alt="" src="http://ad.softcatala.org/www/delivery/avw.php?zoneid=14&amp;n=d7f8765" /></a></noscript>';
-		
-		if ( ( $fitxa == 'rebostwiki' ) || ( $fitxa == 'rebostfitxa' ) ) {
+	
+		if ( $fitxa == 'rebostfitxa' || $fitxa == 'rebostwiki' ) {	
 			$publistr = '<script type="text/javascript"><!--// <![CDATA[
     /* [id15] Softcatalà - Rebost Publisuperior esquerra */
     OA_show(15);
