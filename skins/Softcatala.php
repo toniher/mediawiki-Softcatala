@@ -245,7 +245,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 				
 			</div>
 
-			<?php if ( $this->data['catlinks'] && $fitxa != 'rebostfitxa' ): ?>
+			<?php if ( $this->data['catlinks'] && ( $fitxa == 'projectes' ||  $fitxa == 'paginasimple' )  ): ?>
 			<!-- catlinks -->
 			<div class="lindot">
 				<img src="/img/shim.gif" alt="Separa Categories" longdesc="Separa Categories">
