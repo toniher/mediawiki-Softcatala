@@ -105,7 +105,9 @@ function renderEmailForm( $input, $argv, $parser ) {
 # http://www.mediawiki.org/wiki/Extensions_FAQ#Recent_versions
 # In MediaWiki 1.7.0 and upwards, the following should be sufficient:
 function render_email_field($arg, $value, $ispost, $input, &$parser, $extra) {
-    global $wgTitle;
+
+    // Title from the parser
+    $wgTitle = $parser->getTitle();
  
      switch ( strtolower($arg) ) {
  
@@ -150,7 +152,7 @@ function render_email_field($arg, $value, $ispost, $input, &$parser, $extra) {
  
     default:
         # Result: Display contents of corresponding field
-        if ($ispost)     return( $_POST[$arg] );
+        if ( $ispost && array_key_exists( $arg, $_POST ) )     return( $_POST[$arg] );
         # Build other form fields
         # If the argument is numeric, it's a text field size
         if ( $value > 0 ) {
