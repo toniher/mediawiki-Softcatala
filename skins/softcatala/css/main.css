@@ -148,6 +148,10 @@ clear:both;
 
 .body_white3 li{width:99%;font-family:Verdana, Arial, Helvetica, sans-serif;margin-left:8px;color:#191919;font-size:13px;font-weight:normal;padding:0px 0px 0px 0px;}
 
+.body_white3 ul.gallery li.gallerybox{
+	margin-left: 2px;
+}
+
 .body_white3 li a{color:#3B5998;text-decoration:underline;}
 .body_white3 li a:hover{color:#3B5998;text-decoration:underline;}
 
