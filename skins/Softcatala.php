@@ -169,13 +169,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		</div>
 		<div class="menuwiki"> <?php $this->renderPortals( $this->data['sidebar'] ); ?></div>
 		</div>
-		<div class="boxgoogle_publi">
-			<div class="boxpubli">PUBLICITAT</div>
-			<script type='text/javascript'><!--// <![CDATA[
-			/* [id4] Softcatalà - Wiki requadre */
-			OA_show(4);
-			// ]]> --></script><noscript><a target='_blank' href='http://ad.softcatala.org/www/delivery/ck.php?n=801f44b'><img border='0' alt='' src='http://ad.softcatala.org/www/delivery/avw.php?zoneid=4&amp;n=801f44b' /></a></noscript>
-		</div>
+<!--# include virtual="/ssi/ads/wiki-requadre-lateral.html" -->' ;
 		<div class="img_sidebar">
 		  <a href="/wiki/Projectes/Rebost/Instruccions#Incorporaci.C3.B3_de_nous_programes_a_El_Rebost"><img class="bzero" longdesc="#" alt="Afegeix un programa" src="/img/banner_afegir.jpg"></a>
 		</div>
