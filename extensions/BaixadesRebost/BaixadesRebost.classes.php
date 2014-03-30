@@ -76,7 +76,8 @@ class BaixadesRebost {
 		
 		}
 
-		return $parser->insertStripItem( $num_baixades, $parser->mStripState );
+		return $num_baixades; // Avoiding breaking
+		//return $parser->insertStripItem( $num_baixades, $parser->mStripState );
 		
 	
 	}
