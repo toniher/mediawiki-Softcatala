@@ -34,13 +34,17 @@ class BaixadesRebost {
 		);
 		
 		// Default current page
-		$page =  $parser->getTitle()->getArticleID();
+		$pageid =  $parser->getTitle()->getArticleID();
 		// No interval --> all
 		$interval = "";
 		
 		if ( isset( $args[0] ) ) {
 			if ( ! empty( $args[0] ) ) {
 				$page = trim( $frame->expand( $args[0] ) );
+				$title = Title::newFromText( $page );
+				if ( $title ) {
+					$pageid = $title->getArticleID();
+				}
 			}
 		}
 		
@@ -48,8 +52,8 @@ class BaixadesRebost {
 			$interval = trim( $frame->expand( $args[1] ) );
 		}
 
-		if ( ! is_numeric( $page ) ) {
-			$page = 0;
+		if ( ! is_numeric( $pageid ) ) {
+			$pageid = 0;
 		}
 
 		$from = array('baixades');
@@ -57,9 +61,9 @@ class BaixadesRebost {
 		
 		if ( !empty( $interval ) ) {
 			// Need a switch here! -> dia, mes, any
-			$where = array('idrebost = '.$page );
+			$where = array('idrebost = '.$pageid );
 		} else {
-			$where = array('idrebost = '.$page );
+			$where = array('idrebost = '.$pageid );
 		}
 		
 		$options = array();
