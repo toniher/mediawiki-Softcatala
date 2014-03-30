@@ -14,6 +14,19 @@ $wgExtensionCredits['parserhook'][] = array(
 	'descriptionmsg' => 'Baixades del Rebost',
 );
 
+
+#Local DB
+$wgBaixadesRebostDB = array(
+	"server" => "127.0.0.1",
+	"type" => "mysql",
+	"name" => "rebost",
+	"username" => "rebost",
+	"password" => "rebost",
+	"flags" => "",
+	"tableprefix" => ""
+);
+
+
 /** LOADING OF CLASSES **/
 // https://www.mediawiki.org/wiki/Manual:$wgAutoloadClasses
 $wgAutoloadClasses['BaixadesRebost'] = __DIR__ . '/BaixadesRebost.classes.php';
