@@ -34,7 +34,7 @@ class BaixadesRebost {
 		);
 		
 		// Default current page
-		$page =  $parser->getTitle()->getId();
+		$page =  $parser->getTitle()->getArticleID();
 		// No interval --> all
 		$interval = "";
 		
@@ -51,7 +51,7 @@ class BaixadesRebost {
 		}
 
 		$from = array('baixades');
-		$columns = array('count(*) as COUNT');
+		$columns = array('count(*)');
 		
 		if ( !empty( $interval ) ) {
 			// Need a switch here! -> dia, mes, any
@@ -61,13 +61,17 @@ class BaixadesRebost {
 		}
 		
 		$options = array();
-
+		
+		$num_baixades = 0;
+		
 		$rows = self::searchDB( $db, $from, $columns, $where, $options );
 
-		$num_baixades = 0;
+		if ( $rows ) {
 
-		foreach ( $rows as $row ) {
-			$num_baixades = $row['COUNT'];
+			foreach ( $rows as $row ) {
+				$num_baixades = $row['count(*)'];
+			}
+		
 		}
 
 		return $parser->insertStripItem( $num_baixades, $parser->mStripState );
