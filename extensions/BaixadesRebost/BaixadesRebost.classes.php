@@ -39,7 +39,9 @@ class BaixadesRebost {
 		$interval = "";
 		
 		if ( isset( $args[0] ) ) {
-			$page = trim( $frame->expand( $args[0] ) );
+			if ( ! empty( $args[0] ) ) {
+				$page = trim( $frame->expand( $args[0] ) );
+			}
 		}
 		
 		if ( isset( $args[1] ) ) {
