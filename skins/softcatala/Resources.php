@@ -6,11 +6,12 @@
  */
 global $wgResourceModules, $wgStylePath, $wgStyleDirectory;
 $wgResourceModules['skins.softcatala'] = array(
-   'styles' => array( 'softcatala/css/main.css' => array( 'media' => 'screen'),
-                     'softcatala/css/sc.css' => array('media' => 'screen' ),
-                     'softcatala/css/rebost.css' => array('media' => 'screen' ),
+   'styles' => array( 'softcatala/css/main.css' => array( 'media' => 'screen' ),
+		      'softcatala/css/cookies/cookiecuttr.css' => array(  'media' => 'screen' ),
+                      'softcatala/css/sc.css' => array('media' => 'screen' ),
+                      'softcatala/css/rebost.css' => array('media' => 'screen' ),
                 ),
-   'scripts' => array('softcatala/js/softcatala.js',  'softcatala/js/rebost.js'),
+   'scripts' => array( 'softcatala/js/cookies/jquery.cookie.js', 'softcatala/js/cookies/jquery.cookiecuttr.js', 'softcatala/js/softcatala.js',  'softcatala/js/rebost.js' ),
    'remoteBasePath' => $wgStylePath,
    'localBasePath' => $wgStyleDirectory,
 );
