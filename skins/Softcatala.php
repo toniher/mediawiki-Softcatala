@@ -169,7 +169,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 		</div>
 		<div class="menuwiki"> <?php $this->renderPortals( $this->data['sidebar'] ); ?></div>
 		</div>
-<!--# include virtual="/ssi/ads/wiki-requadre-lateral.html" -->' ;
+<!--# include virtual="/ssi/ads/wiki-requadre-lateral.html" -->
 		<div class="img_sidebar">
 		  <a href="/wiki/Projectes/Rebost/Instruccions#Incorporaci.C3.B3_de_nous_programes_a_El_Rebost"><img class="bzero" longdesc="#" alt="Afegeix un programa" src="/img/banner_afegir.jpg"></a>
 		</div>
