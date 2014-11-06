@@ -277,7 +277,7 @@ class SoftcatalaTemplate extends BaseTemplate {
 			<?php endforeach; ?>
 
 			<div style="clear:both"></div>
-			<div id="logospeu">El lloc web de <strong>Softcatalà</strong> funciona gràcies a <a href="http://www.drupal.cat"><img src="/img/footer/logo_drupal.gif" alt="Drupal" title="Drupal" /></a> <a href="http://www.mediawiki.org/wiki/MediaWiki/ca"><img src="/img/footer/logo_mediawiki.gif" alt="Mediawiki" title="Mediawiki" /></a> <a href="http://phpbb.com"><img src="/img/footer/logo_phpBB.gif" alt="phpBB" title="phpBB" /></a> <a href="http://debian.org"><img src="/img/footer/logo_debian.gif" alt="Debian" title="Debian" /></a> entre altre programari lliure.<span class="hostatge"><strong>Hostatjat a:</strong> <a href="http://www.udl.cat"><img src="/img/footer/logo_UdL.gif" alt="UDL" title="UDL" /></a></span></div>
+			<!--# include virtual="/ssi/footer-logos.html" -->
 		</div>
 		<!-- F FOOTER -->	
 
