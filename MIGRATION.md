@@ -7,23 +7,26 @@ In this document there are some details of pending things to migration for versi
 * UserFunctions
 * ExtractText
 
-## Composer pending
+## Composer pending to test
 
+* Alink (Replace ExternalImage)
 * TwitterFBLike
 * Colorbox
 * MailMan
+
+## Composer pending to migrate
+
 * EmailAddressImage
-* ExternalImage (following model of alink, integrate with ¿alink?)
-* MD5sum
+* MD5sum (to be be replaced by Hashsum)
 * GetUserInfo
  
 ## Other (ideally composer upstream :/)
 * CustomNavBlocks
 * googleAnalytics with upstream (and new features?)
 
-## Deprecated extensions (already enabled in MediaWiki)
+## Deprecated extensions (already enabled in MediaWiki or in another extension)
 
 * ToggleDisplay2
 * Vector
-
+* ExternalImage
 
