@@ -6,6 +6,7 @@ In this document there are some details of pending things to migration for versi
 * Semantic Bundle (we should check which ones we are using !!!)
 * UserFunctions
 * ExtractText
+* Hashsum (replaces MD5sum)
 
 ## Composer pending to test
 
@@ -17,7 +18,6 @@ In this document there are some details of pending things to migration for versi
 ## Composer pending to migrate
 
 * EmailAddressImage
-* MD5sum (to be be replaced by Hashsum)
 * GetUserInfo
  
 ## Other (ideally composer upstream :/)
