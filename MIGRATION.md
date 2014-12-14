@@ -7,6 +7,7 @@ In this document there are some details of pending things to migration for versi
 * UserFunctions
 * ExtractText
 * Hashsum (replaces MD5sum)
+* EmailAddressImage
 
 ## Composer pending to test
 
@@ -17,7 +18,6 @@ In this document there are some details of pending things to migration for versi
 
 ## Composer pending to migrate
 
-* EmailAddressImage
 * GetUserInfo
  
 ## Other (ideally composer upstream :/)
