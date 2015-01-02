@@ -2,23 +2,20 @@ In this document there are some details of pending things to migration for versi
 
 ## Composer already enabled
 
+* Alink (Replace ExternalImage)
 * ImageMap
 * Semantic Bundle (we should check which ones we are using !!!)
 * UserFunctions
 * ExtractText
 * Hashsum (replaces MD5sum)
 * EmailAddressImage
+* GetUserInfo
+* MailMan
 
 ## Composer pending to test
 
-* Alink (Replace ExternalImage)
 * TwitterFBLike
 * Colorbox
-* MailMan
-
-## Composer pending to migrate
-
-* GetUserInfo
  
 ## Other (ideally composer upstream :/)
 * CustomNavBlocks
