@@ -44,7 +44,7 @@ class SkinSoftcatala extends SkinTemplate {
 				"/{$this->stylename}/csshover{$min}.htc\")}</style><![endif]-->"
 		);
 		// We add extra elements until a better way
-		$out->addHeadItem( 'publicitat', '<script type="text/javascript" src="http://ad.softcatala.org/www/delivery/spcjs.php?id=1"></script>');
+		$out->addHeadItem( 'publicitat', '<script type="text/javascript" src="https://ad.softcatala.org/www/delivery/spcjs.php?id=1"></script>');
 		$out->addHeadItem( 'logo', '<link rel="image_src" href="http://www.softcatala.org/imatges/noticies/softcatala.png" />');
 		$out->addHeadItem( 'logometa', '<meta property="og:image" content="http://www.softcatala.org/imatges/noticies/softcatala.png" />');
 	}
