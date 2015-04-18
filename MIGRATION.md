@@ -27,3 +27,49 @@ In this document there are some details of pending things to migration for versi
 * Vector
 * ExternalImage
 
+
+# STEPS
+
+composer require "mediawiki/semantic-media-wiki" "2.1.x"
+php maintenance/update.php
+enableSemantics( 'beta.softcatala.org' );
+php extensions/SemanticMediaWiki/maintenance/SMW_refreshData.php -d 50 -v
+
+composer require "mediawiki/semantic-maps" "3.1.x"
+
+composer require "mediawiki/semantic-forms"  "3.2.x"
+
+composer require "mediawiki/semantic-result-formats" "2.1.x"
+
+composer require "mediawiki/user-functions" "dev-master"
+
+composer require "mediawiki/image-map" "dev-master"
+
+composer require "mediawiki/extract-text" "dev-master"
+
+composer require "mediawiki/piwik-integration" "dev-master"
+
+composer require "mediawiki/mailman" "dev-master"
+
+composer require "mediawiki/email-address-image" "dev-master"
+
+composer require "mediawiki/get-user-info" "dev-master"
+
+composer require "mediawiki/hashsum" "dev-master"
+
+composer require "mediawiki/alink" "dev-master"
+
+Install packages
+
+SemanticInternalObjects
+Variables
+RegexFunctions
+ApprovedRevs
+Editcount
+PipeEscape
+Mycroft
+OpenSearch
+
+
+
+
