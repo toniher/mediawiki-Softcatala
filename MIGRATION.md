@@ -11,11 +11,12 @@ In this document there are some details of pending things to migration for versi
 * EmailAddressImage
 * GetUserInfo
 * MailMan
+* Colorbox
+* CustomNavBlocks
 
 ## Composer pending to test
 
 * TwitterFBLike
-* Colorbox
  
 ## Other (ideally composer upstream :/)
 * CustomNavBlocks
@@ -29,6 +30,8 @@ In this document there are some details of pending things to migration for versi
 
 
 # STEPS
+
+## Composer
 
 composer require "mediawiki/semantic-media-wiki" "2.1.x"
 php maintenance/update.php
@@ -59,7 +62,12 @@ composer require "mediawiki/hashsum" "dev-master"
 
 composer require "mediawiki/alink" "dev-master"
 
-Install packages
+composer require "mediawiki/custom-nav-blocks" "dev-master"
+
+composer require "mediawiki/colorbox" "dev-master"
+
+
+## Install packages
 
 SemanticInternalObjects
 Variables
@@ -69,7 +77,11 @@ Editcount
 PipeEscape
 Mycroft
 OpenSearch
-
-
-
+Lockdown
+googleAnalytics
+IconaRebost
+EmailForm
+BaixadesRebost
+VoteNY
+TwitterFBLike
 
