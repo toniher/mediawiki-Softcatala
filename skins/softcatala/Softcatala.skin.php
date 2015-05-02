@@ -57,8 +57,23 @@ class SkinSoftcatala extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ){
 		
 		parent::setupSkinUserCss( $out );
-
-		$out->addModuleStyles( 'skins.softcatala' );
+		
+		// FIXME: This is the "proper" way to include CSS
+		// however, MediaWiki's ResourceLoader messes up media queries
+		// See: https://bugzilla.wikimedia.org/show_bug.cgi?id=38586
+		// &: http://stackoverflow.com/questions/11593312/do-media-queries-work-in-mediawiki
+		//
+		//$out->addModuleStyles( 'skins.softcatala' );
+	
+		// Instead, we're going to manually add each, 
+		// so we can use media queries
+		foreach ( $wgResourceModules['skins.softcatala']['styles'] as $cssfile => $cssvals ) {
+		  if (isset($cssvals)) {
+			$out->addStyle( $cssfile, $cssvals['media'] );
+		  } else {
+			$out->addStyle( $cssfile );
+		  }
+		}
 	}
 
 }
